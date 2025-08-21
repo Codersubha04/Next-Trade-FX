@@ -1,64 +1,67 @@
 import { motion } from "framer-motion";
+import AiDrivenApi from "../assets/AI driven API.jpeg"
+import metaTradertoTelegram from "../assets/MT5 To telegram.jpeg";
+import tradingviewtoStockMarket from "../assets/Tradingview to stcok market.jpeg";
+import customCraftedIndicators from "../assets/Custom craft indicators.jpeg";
+import algorithmicTrading from "../assets/Algorithmic Trading.jpeg";
+import TradingtoMetaTrader from "../assets/ChatGPT Image Aug 21, 2025, 05_36_52 PM.png";
 
 const services = [
   {
     title: "API-DRIVEN SOFTWARE DEVELOPMENT",
     description:
       "Streamline trading with our API-based software for flexible connectivity, ensuring you stay ahead in the evolving trading landscape.",
-    imgSrc: "/algo trading.png",
+    imgSrc: AiDrivenApi,
     color: "from-[#1F51FF] to-[#00C6FF]", // Blue gradient
   },
   {
     title: "BRIDGING TRADING VIEW WITH STOCK MARKET",
     description:
       "Easily automate trades with our Trading View to Stock Market integration, ensuring swift execution for seamless access to both platforms.",
-    imgSrc: "/algo trading.png",
+    imgSrc: tradingviewtoStockMarket,
     color: "from-[#FF7A00] to-[#FFC107]", // Orange gradient
   },
   {
     title: "BRIDGING TELEGRAM WITH MT4/MT5",
     description:
       "Easily automate trades with our Telegram to MT4/MT5 integration, ensuring lightning-fast execution of signal-based trading without manual input.",
-    imgSrc: "/algo trading.png",
+    imgSrc: metaTradertoTelegram,
     color: "from-[#00C853] to-[#00E676]", // Green gradient
   },
   {
     title: "ALGORITHMIC TRADING STRATEGY DEVELOPMENT",
     description:
       "Personalized algorithmic strategies tailored to your preferences. Share your needs; we'll craft a custom solution for market success.",
-    imgSrc: "/algo trading.png",
+    imgSrc: algorithmicTrading,
     color: "from-[#1F51FF] to-[#00C6FF]",
   },
   {
     title: "CUSTOM CRAFTED INDICATORS",
     description:
       "Need precision tools? Our experts craft personalized indicators for dynamic insights, elevating your trading game with real-time precision.",
-    imgSrc: "/algo trading.png",
+    imgSrc: customCraftedIndicators,
     color: "from-[#FF7A00] to-[#FFC107]",
   },
   {
     title: "BRIDGING TRADING VIEW WITH MT4/MT5",
     description:
       "Easily automate trades with our Trading View to MT4/MT5 integration, ensuring swift execution for seamless access to both platforms.",
-    imgSrc: "/algo trading.png",
+    imgSrc: TradingtoMetaTrader,
     color: "from-[#00C853] to-[#00E676]",
   },
 ];
 
 const ModernServicesSection = () => {
   return (
-    <section className="bg-[#0D0F11] py-20 px-6 max-w-7xl mx-auto text-center select-none">
-      <h2 className="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight leading-tight max-w-4xl mx-auto">
-        <span className="bg-gradient-to-r from-[#1F51FF] to-[#00C6FF] bg-clip-text text-transparent">
-          COMPRE
-        </span>
-        <span className="bg-gradient-to-r from-[#FF7A00] to-[#FFC107] bg-clip-text text-transparent">
-          HENSIVE{" "}
-        </span>
-        <span className="text-white">GLOBAL TRADING SOLUTIONS</span>
+    <section className="bg-[#0D0F11] py-1 px-6 max-w-7xl mx-auto text-center select-none">
+      <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
+        <span className="text-[#FF7A00]">Compre Hensive </span>
+        Global Trading Solutions
       </h2>
+
       <p className="text-gray-400 max-w-3xl mx-auto mb-20 text-lg leading-relaxed">
-        We provide solutions to 6 different types of worldwide trading problems in the best way possible.
+        We provide solutions to 6 different types of worldwide trading problems
+        in the best way possible.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
@@ -99,7 +102,9 @@ const ModernServicesSection = () => {
               >
                 {title}
               </h3>
-              <p className="text-gray-300 text-sm flex-grow leading-relaxed">{description}</p>
+              <p className="text-gray-300 text-sm flex-grow leading-relaxed">
+                {description}
+              </p>
             </div>
           </motion.div>
         ))}
