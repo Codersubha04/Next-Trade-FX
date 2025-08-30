@@ -56,7 +56,7 @@ export default function PremiumProducts() {
   const [visibleCount, setVisibleCount] = useState(2);
 
   return (
-    <section className="px-6 pb-[5rem] bg-[#0D0F11]">
+    <section className="px-6 pb-[5rem] pt-[3rem] bg-[#0D0F11]">
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -65,10 +65,9 @@ export default function PremiumProducts() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-      <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
-  Premium <span className="text-[#FF7A00]">Trading Tools</span>
-</h2>
-
+        <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
+          Premium <span className="text-[#FF7A00]">Trading Tools</span>
+        </h2>
 
         <p className="text-white/60 mt-3 max-w-2xl mx-auto">
           Crafted for professional traders — combining precision, speed, and
