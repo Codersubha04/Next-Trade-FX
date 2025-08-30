@@ -7,201 +7,411 @@ import Accordion from "../Components/Accordion";
 import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
 
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { FaChalkboardTeacher, FaGraduationCap, FaRocket } from "react-icons/fa";
+import EducationImg from "../assets/NEXT TRADE WEB IMAGE (Education).png";
+
+const cards = [
+  {
+    title: "Expert Mentors",
+    desc: "Learn from industry experts with years of real-world experience.",
+    icon: <FaChalkboardTeacher />,
+  },
+  {
+    title: "Comprehensive Courses",
+    desc: "Structured content from basics to advanced strategies.",
+    icon: <FaGraduationCap />,
+  },
+  {
+    title: "Fast Progress",
+    desc: "Accelerate your learning with actionable insights & tips.",
+    icon: <FaRocket />,
+  },
+];
+
+// 🔹 Modern Premium Animation Variants
+const cardAnim = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1], // smooth cubic bezier (premium)
+      type: "spring",
+      stiffness: 80,
+      damping: 15,
+    },
+  },
+  hover: {
+    scale: 1.06,
+    rotate: 0.5, // subtle 3D tilt
+    y: -6,
+    boxShadow: "0 0 40px rgba(255,122,0,0.35)",
+    transition: {
+      duration: 0.4,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
 const FreeForex = () => {
-    return (
-        <div className="bg-black">
-            <Header />
+  return (
+    <div className="bg-black">
+      <Header />
 
-            <div className="bgg">
-                <Hero 
-                mainText={"Free Forex Training"}
-                subText={"How can you enjoy our free forex training program?"}
-                />
-            </div>
+      <div className="relative overflow-hidden bg-gradient-to-b from-[#0B0F19] to-[#000000] pt-[7rem] pb-[5rem]">
+        {/* 🔹 Dotted Background */}
+        <div
+          className="absolute inset-0 opacity-20 bg-[radial-gradient(#FF7A00_1px,transparent_1px)] 
+                [background-size:30px_30px]"
+        ></div>
 
-            <div className="flex mx:gap-10 mx:px-0 mx:flex-col px-20 justify-between bg-[#0D0F11] py-16">
-                <div className="flex flex-col gap-4 my-auto mx:justify-center mx:items-center">
-                    <p className="text-[#1CCBB1] mx:text-lg text-[17px] leading-6 font-medium int">
-                        Mentorship program
-                    </p>
-
-                    <p className="text-[50px] mx:text-[32px] mx:leading-[40px] font-semibold unv leading-[61.5px] text-[#e4e4e7] mx:text-center">
-                        Explore the World of <br /> Forex Trading with Our <br /> Free
-                        Training
-                    </p>
-
-                    <p className="mx:leading-6 text-[#AAAAB3] mx:text-base leading-7 text-base intt font-normal mx:text-center">
-                        At Crystal pips Hub, we believe that quality education should be
-                        accessible to <br /> everyone. Our Free Forex Training program is
-                        designed to introduce you to the <br /> fundamentals of Forex
-                        trading and provide you with the knowledge you need to start your{" "}
-                        <br /> trading journey confidently.
-                    </p>
-
-                    <div>
-                        <button className="text-white font-bold text-base leading-8 unv bg-[#1CCBB1] px-4 py-2 rounded-lg">
-                            Join community
-                        </button>
-                    </div>
-                </div>
-
-                <img src={images} alt="" />
-            </div>
-
-            <div className="flex flex-col gap-10 py-14">
-                <p className="text-[50px] mx:text-[28px] mx:leading-[40px] mx:text-center px-16 font-semibold unv leading-[61.5px] text-[#e4e4e7]">
-                    Why Choose Our Free Training
-                </p>
-
-                <div className="flex mx:px-0 mx:flex-col mx:justify-center mx:items-center mx:gap-4 px-16 justify-between">
-                    <div className="flex flex-col mx:w-[90%] gap-3 px-4 py-4 rounded-xl bg-gradient-to-b from-[#1d3a31] to-[#010201]">
-                        <div>
-                            <img src={forex} alt="" />
-                        </div>
-                        <p className="text-white unv font-semibold text-[21px]  leading-[27.3px]">
-                            Ongoing Development
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base">
-                            Trading is a journey, and our mentorship program <br /> is
-                            designed to support your ongoing development. <br /> Stay updated
-                            with the latest market trends, <br /> strategies, and tools
-                            through continuous learning <br /> and mentor support.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col mx:w-[90%] gap-3 px-4 py-4 rounded-xl bg-gradient-to-b from-[#1d3a31] to-[#010201]">
-                        <div>
-                            <img src={forex} alt="" />
-                        </div>
-                        <p className="text-white unv font-semibold text-[21px]  leading-[27.3px]">
-                            One-on-One Sessions
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base">
-                            Benefit from dedicated one-on-one sessions with <br /> your
-                            mentor. These personalized meetings are <br /> designed to address
-                            your specific questions, <br /> challenges, and goals.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col mx:w-[90%] gap-3 px-4 py-4 rounded-xl bg-gradient-to-b from-[#1d3a31] to-[#010201]">
-                        <div>
-                            <img src={forex} alt="" />
-                        </div>
-                        <p className="text-white unv font-semibold text-[21px]  leading-[27.3px]">
-                            Trading Tools and Resources
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base">
-                            Access a suite of trading tools and resources that <br /> enhance
-                            your learning experience. From advanced <br /> charting software
-                            to proprietary trading indicators, <br /> we provide the tools you
-                            need to succeed.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="bg-[#0D0F11] flex flex-col gap-2 py-20">
-                <p className="text-[50px] mx:text-[36px] mx:leading-[40px] text-center font-semibold unv leading-[61.5px] text-[#e4e4e7] mb-6">
-                    What You'll Learn
-                </p>
-
-                <div className="flex gap-14 bg-[#101214] mx:mx-4 mx:flex-col mx-[5.5rem] p-4 rounded-md border-[#292929] border-2">
-                    <img src={imgReplace1} alt="" />
-
-                    <div className="flex flex-col gap-8 my-auto">
-                        <p className="text-white unv font-semibold text-[21px] leading-[27.3px]">
-                            Introduction to Forex
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base">
-                            Understand what Forex trading is, how the market operates, <br />{" "}
-                            and the benefits of trading currencies.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex mx:px-4 mx:gap-3 mx:flex-col px-[5.5rem] justify-between">
-                    <div className="flex flex-col gap-8 bg-[#101214] p-4 pr-[18px] rounded-md border-[#292929] border-2">
-                        <div className="flex flex-col gap-4">
-                            <p className="text-white unv font-semibold text-[21px] leading-[27.3px]">
-                                Basic Terminology
-                            </p>
-                            <p className="text-[#A1A1AA] int font-normal text-base leading-7">
-                                Familiarize yourself with essential trading terms such as pips,
-                                spreads, <br /> leverage, and margins.
-                            </p>
-                        </div>
-
-                        <div>
-                            <img src={imgReplace1} alt="" />
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col-reverse gap-8 bg-[#101214] p-4 pr-[18px] rounded-md border-[#292929] border-2">
-                        <div className="flex flex-col gap-4">
-                            <p className="text-white unv font-semibold text-[21px] leading-[27.3px]">
-                                Market Participants
-                            </p>
-                            <p className="text-[#A1A1AA] int font-normal text-base leading-7">
-                                Learn about the key players in the Forex market, including
-                                banks, <br /> institutions, retail traders, and more.
-                            </p>
-                        </div>
-
-                        <div>
-                            <img src={imgReplace1} alt="" />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex mx:px-4 mx:gap-3 mx:flex-col px-[5.5rem] justify-between">
-                    <div className="flex flex-col gap-4 bg-[#101214] p-3 rounded-md border-[#292929] border-2">
-                        <p className="text-white unv font-semibold text-[21px] leading-[27.3px]">
-                            Analyzing the Market
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base leading-7">
-                            Explore basic analysis techniques, including <br /> technical and
-                            fundamental analysis, to help you <br /> make informed trading
-                            decisions.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col gap-4 bg-[#101214] p-3 rounded-md border-[#292929] border-2">
-                        <p className="text-white unv font-semibold text-[21px] leading-[27.3px]">
-                            Trading Platforms
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base leading-7">
-                            Get an overview of popular trading platforms and <br /> how to use
-                            them to execute trades.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col gap-4 bg-[#101214] p-3 rounded-md border-[#292929] border-2">
-                        <p className="text-white unv font-semibold text-[21px] leading-[27.3px]">
-                            Risk Management
-                        </p>
-                        <p className="text-[#A1A1AA] int font-normal text-base leading-7">
-                            Discover the importance of risk management and <br /> how to
-                            protect your trading capital.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <Accordion />
-
-            <div className="flex flex-col gap-4 justify-center items-center pt-20 pb-16 bg-gradient-to-b from-[#34867b]">
-                <p className="text-[50px] mx:text-[30px] mx:leading-[45px] font-semibold unv text-white leading-[61.5px] text-center">
-                Join Our Free Forex <br /> Training Community
-                </p>
-                <p className="text-base mx:text-base font-normal leading-7 int text-[#AAAAB3] text-center">
-                Take the first step towards mastering Forex trading with personalized mentorship from Crystals <br /> Trading Hub. Apply now and start your journey to becoming a successful trader.
-                </p>
-                <button className="font-medium text-base text-[#2D2D2D] leading-8 intt text-center bg-white px-6 rounded-md py-1">Join Community</button>
-            </div>
-
-            <Footer />
+        {/* 🔹 Floating Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-[#00C853] rounded-full opacity-30 animate-float"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDuration: `${5 + Math.random() * 10}s`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            ></div>
+          ))}
         </div>
-    );
+
+        {/* 🔹 Contact Us Text */}
+        <div className="relative flex justify-center items-center text-center">
+          <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+            Next Trade{" "}
+            <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
+              Forex Traning
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <section className="relative flex mx:flex-col flex-row items-center justify-between bg-black text-white px-20 mx:px-6 py-20 gap-10 rounded-2xl shadow-xl overflow-hidden">
+        {/* Background Gradient Glow */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00]/10 via-transparent to-[#00C853]/10"></div>
+
+        {/* Glow Circles */}
+        <div className="absolute top-10 left-10 w-72 h-72 bg-[#FF7A00]/20 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-[#00C853]/20 blur-[120px] rounded-full"></div>
+
+        {/* Left Content */}
+        <motion.div
+          className="flex flex-col gap-6 mx:text-center text-left my-auto relative z-10"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.p
+            className="text-[#FF7A00] mx:text-lg text-[18px] font-medium tracking-wide uppercase"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            Mentorship Program
+          </motion.p>
+
+          <motion.h2
+            className="text-[#e4e4e7] text-[50px] mx:text-[32px] mx:leading-[42px] font-semibold leading-[61px] unv"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            Master the Art of <br />
+            Forex Trading with <br />
+            <span className="text-[#FF7A00]">Next Trade FX</span>
+          </motion.h2>
+
+          <motion.p
+            className="text-[#AAAAB3] text-base leading-7 font-normal intt mx:text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            At{" "}
+            <span className="text-[#FF7A00] font-semibold">Next Trade FX</span>,
+            we provide premium mentorship designed to take you from beginner to
+            profitable trader. With our proven strategies, live training
+            sessions, and expert guidance, you’ll gain the skills and confidence
+            needed to trade the markets like a pro.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <button className="flex items-center gap-2 text-white font-bold text-base leading-8 unv bg-[#FF7A00] hover:bg-[#e96a00] px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
+              Join Community <ArrowRight size={18} />
+            </button>
+          </motion.div>
+        </motion.div>
+
+        {/* Right Image with Animation */}
+        <motion.div
+          className="relative w-[500px] mx:w-full z-10"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.img
+            src={EducationImg}
+            alt="Next Trade FX Mentorship"
+            className="rounded-2xl shadow-2xl border border-[#1f1f1f]"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 150 }}
+          />
+
+          {/* Glow effect */}
+          <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-[#FF7A00]/30 to-transparent blur-2xl opacity-60 animate-pulse"></div>
+        </motion.div>
+      </section>
+      <section className="flex flex-col gap-12 py-16 px-6 bg-gradient-to-b bg-[#0D0F11]">
+        {/* Heading */}
+        <motion.h2
+          variants={cardAnim}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-[#e4e4e7] text-center unv text-[50px] leading-[61.5px] 
+             mx:text-[36px] mx:leading-[49px]"
+        >
+          Why Choose Our <span className="text-[#FF7A00]">Free Training</span>
+        </motion.h2>
+
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {cards.map((card, i) => (
+            <motion.div
+              key={i}
+              variants={cardAnim}
+              initial="hidden"
+              whileInView="show"
+              whileHover="hover"
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex flex-col gap-4 p-6 rounded-2xl 
+                       bg-gradient-to-br from-[#101214] to-[#0D0F11] 
+                       border border-[#00C853]/20 hover:border-[#FF7A00]/50 
+                       shadow-lg hover:shadow-[0_20px_40px_rgba(255,122,0,0.3)] 
+                       transition-all duration-300"
+            >
+              <div className="flex justify-center text-4xl text-[#FF7A00]">
+                {card.icon}
+              </div>
+              <h3 className="text-white font-semibold text-xl text-center">
+                {card.title}
+              </h3>
+              <p className="text-[#A1A1AA] text-sm text-center leading-6">
+                {card.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-b bg-[#0D0F11] py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
+          {/* Heading */}
+          <motion.p
+            variants={cardAnim}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-[50px] md:text-[42px] sm:text-[36px] leading-[1.2] text-center font-semibold text-white mb-14"
+          >
+            What You'll Learn
+          </motion.p>
+
+          {/* Top Card */}
+          <motion.div
+            variants={cardAnim}
+            initial="hidden"
+            whileInView="show"
+            whileHover="hover"
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex flex-col md:flex-row gap-8 md:gap-14 rounded-2xl border border-[#292929] 
+                     bg-gradient-to-br from-[#101214] to-[#0F1216] p-6 md:p-7 
+                     transition-all duration-300"
+            animate="show"
+          >
+            <img
+              src={imgReplace1}
+              alt=""
+              className="w-[120px] h-[120px] md:w-[140px] md:h-[140px] rounded-xl object-cover shrink-0"
+            />
+            <div className="flex flex-col gap-6 my-auto">
+              <p className="text-white font-semibold text-[21px] leading-[27px]">
+                <span className="inline-block w-2.5 h-2.5 mr-2 rounded-full bg-[#FF7A00] shadow-[0_0_14px_#FF7A00]"></span>
+                Introduction to Forex
+              </p>
+              <p className="text-[#A1A1AA] text-base leading-7">
+                Understand what Forex trading is, how the market operates, and
+                the benefits of trading currencies.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Row of 2 */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <motion.div
+              variants={cardAnim}
+              initial="hidden"
+              whileInView="show"
+              whileHover="hover"
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex flex-col justify-between rounded-2xl border border-[#292929] 
+                       bg-gradient-to-br from-[#101214] to-[#0F1216] p-6 
+                       transition-all duration-300"
+            >
+              <div className="flex flex-col gap-4">
+                <p className="text-white font-semibold text-[21px] leading-[27px]">
+                  <span className="inline-block w-2.5 h-2.5 mr-2 rounded-full bg-[#FF7A00] shadow-[0_0_12px_#FF7A00]"></span>
+                  Basic Terminology
+                </p>
+                <p className="text-[#A1A1AA] text-base leading-7">
+                  Familiarize yourself with essential trading terms such as
+                  pips, spreads, leverage, and margins.
+                </p>
+              </div>
+              <img
+                src={imgReplace1}
+                alt=""
+                className="w-[110px] h-[110px] rounded-lg object-cover mt-4"
+              />
+            </motion.div>
+
+            {/* Card 2 */}
+            <motion.div
+              variants={cardAnim}
+              initial="hidden"
+              whileInView="show"
+              whileHover="hover"
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex flex-col-reverse rounded-2xl border border-[#292929] 
+                       bg-gradient-to-br from-[#101214] to-[#0F1216] p-6 
+                       transition-all duration-300"
+            >
+              <div className="flex flex-col gap-4">
+                <p className="text-white font-semibold text-[21px] leading-[27px]">
+                  <span className="inline-block w-2.5 h-2.5 mr-2 rounded-full bg-[#FF7A00] shadow-[0_0_12px_#FF7A00]"></span>
+                  Market Participants
+                </p>
+                <p className="text-[#A1A1AA] text-base leading-7">
+                  Learn about the key players in the Forex market, including
+                  banks, institutions, retail traders, and more.
+                </p>
+              </div>
+              <img
+                src={imgReplace1}
+                alt=""
+                className="w-[110px] h-[110px] rounded-lg object-cover mb-4"
+              />
+            </motion.div>
+          </div>
+
+          {/* Row of 3 */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Analyzing the Market",
+                desc: "Explore basic analysis techniques, including technical and fundamental analysis, to help you make informed trading decisions.",
+                glow: "#00C853",
+              },
+              {
+                title: "Trading Platforms",
+                desc: "Get an overview of popular trading platforms and how to use them to execute trades.",
+                glow: "#FF7A00",
+              },
+              {
+                title: "Risk Management",
+                desc: "Discover the importance of risk management and how to protect your trading capital.",
+                glow: "#00C853",
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={card.title}
+                variants={cardAnim}
+                initial="hidden"
+                whileInView="show"
+                whileHover="hover"
+                viewport={{ once: true, amount: 0.3 }}
+                className="flex flex-col gap-4 rounded-2xl border border-[#292929] 
+                         bg-gradient-to-br from-[#101214] to-[#0F1216] p-6 
+                         transition-all duration-300"
+              >
+                <p className="text-white font-semibold text-[21px] leading-[27px]">
+                  <span
+                    className={`inline-block w-2.5 h-2.5 mr-2 rounded-full`}
+                    style={{
+                      backgroundColor: card.glow,
+                      boxShadow: `0 0 12px ${card.glow}`,
+                    }}
+                  ></span>
+                  {card.title}
+                </p>
+                <p className="text-[#A1A1AA] text-base leading-7">
+                  {card.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Accordion />
+
+      <div className="flex flex-col items-center justify-center gap-6 pt-20 pb-16 bg-gradient-to-b from-[#0d0f11] to-[#101214] relative overflow-hidden">
+        {/* Soft Glow Background */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#ff7a00]/10 via-transparent to-[#00c853]/10 pointer-events-none"></div>
+
+        {/* Heading */}
+        <h2 className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 text-center">
+          Get Started With <br className="hidden mx:block" />
+          <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
+            Next Trade
+          </span>{" "}
+          FX Hub Today
+        </h2>
+
+        {/* Subheading */}
+        <p className="text-base mx:text-sm font-normal int text-[#a1a1aa] text-center max-w-2xl z-10">
+          We are self-service data analytics software that lets you create
+          visually appealing data visualisations and insightful dashboards in
+          minutes.
+        </p>
+
+        {/* Email Input & Button */}
+        {/* Email Input & Button */}
+        <div className="flex w-full max-w-lg items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full p-1 shadow-md transition-all duration-300 z-10 group focus-within:shadow-[0_0_25px_rgba(255,122,0,0.4)]">
+          <div className="relative flex-1">
+            <input
+              type="email"
+              placeholder=" "
+              className="peer w-full bg-transparent outline-none px-4 py-3 text-sm text-white placeholder-transparent"
+            />
+            {/* Floating Label with Smooth Transition */}
+            <label className="absolute left-4 text-[#aaa] text-sm transition-all duration-300 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-[#777] peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#00c853]">
+              Enter your email
+            </label>
+          </div>
+          <button className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-white text-sm font-semibold rounded-full px-6 py-2 hover:opacity-90 hover:scale-[1.05] transition-all duration-300">
+            Let's Go
+          </button>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default FreeForex;

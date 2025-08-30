@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import nprogress from 'nprogress'; 
-import 'nprogress/nprogress.css'; 
-import { AnimatePresence, motion } from 'framer-motion'; 
+import nprogress from 'nprogress';
+import 'nprogress/nprogress.css';
+import { AnimatePresence, motion } from 'framer-motion';
 import About from './About/About';
 import Mentorship from './Mentorship/Mentorship';
 import Landing from './Landing/Landing';
 import FreeForex from './FreeForex/FreeForex';
+import Automation from './Automation/Automation';
+import Strategy from './Strategy/Strategy';
+import Tools from './Tools/Tools';
 import Loading from './Components/Loading';
 import WttVip from './WttVip/WttVip';
 import WttBot from './WttBot/WttBot';
 import Contact from './Contact/Contact';
+import Package from './Package/Package';
 import './App.css';
 
 function App() {
@@ -22,15 +26,15 @@ function App() {
     setIsLoading(true);
 
     const timer = setTimeout(() => {
-      setIsLoading(false); 
-      nprogress.done();  
-    }, 3000); 
+      setIsLoading(false);
+      nprogress.done();
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
-      nprogress.done(); 
+      nprogress.done();
     };
-  }, [location]); 
+  }, [location]);
 
   return (
     <div>
@@ -44,6 +48,10 @@ function App() {
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
             <Route path="/mentorship" element={<PageTransition><Mentorship /></PageTransition>} />
             <Route path="/freeforex" element={<PageTransition><FreeForex /></PageTransition>} />
+            <Route path="/automation" element={<PageTransition><Automation /></PageTransition>} />
+            <Route path="/strategy" element={<PageTransition><Strategy /></PageTransition>} />
+            <Route path="/tools" element={<PageTransition><Tools /></PageTransition>} />
+            <Route path="/package" element={<PageTransition><Package /></PageTransition>} />
             <Route path="/wttvip" element={<PageTransition><WttVip /></PageTransition>} />
             <Route path="/wttbot" element={<PageTransition><WttBot /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
@@ -57,10 +65,10 @@ function App() {
 const PageTransition = ({ children }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 100 }} 
-      animate={{ opacity: 1, x: 0 }}    
-      exit={{ opacity: 0, x: -100 }}   
-      transition={{ duration: 0.5 }}    
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{ duration: 0.5 }}
     >
       {children}
     </motion.div>

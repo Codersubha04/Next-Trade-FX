@@ -46,7 +46,7 @@ const WorkflowSteps = () => {
         "Supports demo/live brokers and prop firms.",
         "Scale effortlessly with automation.",
       ],
-      icons: [DeltaExchangeIcon, MetaTraderIcon], // 👈 do logos de array me
+      icons: [DeltaExchangeIcon, MetaTraderIcon], 
       color: "from-[#00C853] to-[#00E676]",
       ticker: true,
     },

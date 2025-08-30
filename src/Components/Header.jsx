@@ -7,19 +7,19 @@ import logo from "../assets/Next-trade-technologies-logo-2.png";
 
 // Menu Items
 const menuItems = [
-  { name: "About Us", path: "/about1" },
+  { name: "About Us", path: "/about" },
   {
     name: "Our Services",
     submenu: [
       { name: "Next Trade Automation", path: "/automation" },
       { name: "Trading Strategy", path: "/strategy" },
       { name: "Trading Tools", path: "/tools" },
-      { name: "Educations", path: "/education" },
+      { name: "Educations", path: "/freeforex" },
     ],
   },
-  { name: "Packages", path: "/freeforex1" },
-  { name: "Contact Us", path: "/contact1" },
-  { name: "Blog", path: "/wttvip1" },
+  { name: "Packages", path: "/package" },
+  { name: "Contact Us", path: "/contact" },
+  { name: "White Lebel", path: "/wttvip" },
 ];
 
 const Header = () => {
@@ -46,7 +46,7 @@ const Header = () => {
   }, [lastScrollY]);
 
   // Only show header on Home
-  if (location.pathname !== "/") return null;
+  // if (location.pathname !== "/") return null;
 
   return (
     <AnimatePresence>
