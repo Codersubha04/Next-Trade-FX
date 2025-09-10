@@ -98,18 +98,19 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
-              Making Algo Trading{" "}
-              <span className="text-[#FF7A00]">Effortless</span>
-            </h2>
+          <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
+  Get to know <span className="text-[#FF7A00]">Us!</span>
+</h2>
 
-            <p className="text-[#A1A1AA] max-w-3xl mx-auto mt-6 text-lg leading-8">
-              At <span className="font-semibold text-white">Next Trade FX</span>
-              , we simplify algorithmic trading with powerful automation tools,
-              intuitive dashboards, and reliable execution. Our mission is to
-              empower traders and investors to scale faster, trade smarter, and
-              maximize efficiency in every market condition.
-            </p>
+<p className="text-[#A1A1AA] max-w-5xl mx-auto mt-6 text-lg leading-8">
+  <span className="font-semibold text-white">NEXTTRADE TECHNOLOGIES PVT LTD </span> 
+  is India's largest API Bridge (automated) Platform, offering a seamless integration 
+  of various APIs through a unique Webhook system. As a web application built on the 
+  reliable AWS infrastructure, it eliminates the need for any Cloud, VPS, or RTP servers, 
+  making it a hassle-free and user-friendly experience.
+</p>
+
+
           </motion.div>
 
           {/* Stats Grid */}

@@ -39,12 +39,13 @@ const WttVip = () => {
   ];
 
 
- const charges = [
-    { text: "Monthly : 15K per Broker + 5K per Additional Broker" },
-    { text: "Yearly : 1 Lakh per Broker + 30K per Additional Broker" },
-    { text: "3 Years* : 2 Lakh per Broker + 60K per Additional Broker" },
-    { text: "* We can Add your one desired broker (subject to API reliability)" },
-  ];
+const charges = [
+  { text: "Monthly : 15K FOR UPTO 50 USER." },
+  { text: "ONE TIME SETUP COST - 60 K." },
+  // Removed Yearly and 3 Years lines
+  { text: "* We can Add your one desired broker (subject to API reliability)" },
+];
+
 
   const terms = [
     "Understand all features on www.tradingmachine.in before opting for White Label.",
@@ -85,9 +86,9 @@ const WttVip = () => {
         {/* 🔹 Contact Us Text */}
         <div className="relative flex justify-center items-center text-center">
           <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-            White{" "}
+            WHITE{" "}
             <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
-              Lebel
+              LABEL
             </span>
           </h1>
         </div>

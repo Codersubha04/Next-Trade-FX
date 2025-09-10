@@ -97,7 +97,7 @@ const Landing = () => {
           {/* Buttons */}
           <div className="flex justify-center gap-4 mb-12 mt-[3rem]">
             <a
-              href="https://www.delta.exchange/?code=NXOFNV" // apna link dalna
+              href="https://www.delta.exchange/?code=NEXT20" // apna link dalna
               target="_blank"
               rel="noopener noreferrer"
             >

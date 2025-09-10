@@ -14,12 +14,12 @@ const menuItems = [
       { name: "Next Trade Automation", path: "/automation" },
       { name: "Trading Strategy", path: "/strategy" },
       { name: "Trading Tools", path: "/tools" },
-      { name: "Educations", path: "/freeforex" },
+      { name: "Educations", path: "/ForexEducation" },
     ],
   },
   { name: "Packages", path: "/package" },
   { name: "Contact Us", path: "/contact" },
-  { name: "White Lebel", path: "/wttvip" },
+  { name: "White Lebel", path: "/whitelabel" },
 ];
 
 const Header = () => {
@@ -143,7 +143,7 @@ const Header = () => {
 
               {/* Button */}
               <motion.div whileHover={{ scale: 1.08, y: -2 }}>
-                <Link to="/wttbot">
+                <Link to="/">
                   <button
                     className="bg-gradient-to-r from-[#00C853] to-[#00E676] text-white px-6 py-2 rounded-md 
                     font-medium shadow-lg transition-all duration-500 ease-in-out 
