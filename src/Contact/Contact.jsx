@@ -76,11 +76,12 @@ const Contact = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-[#A1A1AA] text-center max-w-2xl mx-auto text-base leading-relaxed mt-4"
           >
-            Facilisis commodo mattis neque nulla ultrices mattis sed.
-            Ullamcorper tempus mattis ac tristique gravida ornare faucibus
-            suspendisse.
+            Have questions, feedback, or business inquiries? Our team at{" "}
+            <span className="font-semibold text-white">
+              NEXTTRADE TECHNOLOGIES PVT LTD  </span>
+             is here to assist you. Reach out anytime and we’ll be glad to help
+            you.
           </motion.p>
-
           <div className="flex flex-col lg:flex-row justify-between gap-10 mt-12">
             {/* Left: Form */}
             <motion.div
@@ -190,10 +191,12 @@ const Contact = () => {
                 Want to reach out directly?
               </h3>
 
-              <p className="text-[#A1A1AA] max-w-md">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Mattis
-                sit phasellus mollis sit aliquam sit nullam.
-              </p>
+             <p className="text-[#A1A1AA] max-w-md">
+  You can contact{" "}
+  <span className="font-semibold text-white">NEXTTRADE TECHNOLOGIES PVT LTD </span> 
+  directly via email or phone. We are committed to providing timely support 
+  and answering all your trading and platform-related queries.
+</p>
 
               <div
                 className="flex items-center gap-4 bg-[#101214] p-4 rounded-xl 
@@ -202,7 +205,9 @@ const Contact = () => {
                 <Mail className="text-[#FF7A00] w-6 h-6" />
                 <div>
                   <p className="text-gray-400 text-sm">Email:</p>
-                  <p className="text-white font-semibold">contact@email.com</p>
+                  <p className="text-white font-semibold">
+                    support@nexttrade.co.in
+                  </p>
                 </div>
               </div>
 
@@ -213,7 +218,7 @@ const Contact = () => {
                 <Phone className="text-[#00C853] w-6 h-6" />
                 <div>
                   <p className="text-gray-400 text-sm">Phone:</p>
-                  <p className="text-white font-semibold">(234) 564 - 6788</p>
+                  <p className="text-white font-semibold">+91 9075559971</p>
                 </div>
               </div>
 
@@ -290,7 +295,7 @@ const Contact = () => {
         <p className="text-base mx:text-sm font-normal int text-[#a1a1aa] text-center max-w-2xl z-10">
           Take the first step towards mastering Forex trading with personalized
           mentorship from{" "}
-          <span className="text-white font-semibold">NextTradeFX</span>. Apply
+          <span className="text-white font-semibold">NextTrade FX</span>. Apply
           now and start your journey to becoming a successful trader.
         </p>
 

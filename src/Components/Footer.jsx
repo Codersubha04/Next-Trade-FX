@@ -2,12 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/Next-trade-technologies-logo-2.png";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
-import {
-  FaXTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaGithub,
-} from "react-icons/fa6";
+import { FaXTwitter, FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -37,16 +33,42 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex gap-5">
-              {[FaXTwitter, FaFacebookF, FaInstagram, FaGithub].map(
-                (Icon, i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 flex items-center justify-center rounded-full border border-[#ff7a00]/30 hover:border-[#ff7a00] hover:bg-[#ff7a00]/10 text-[#ff7a00] hover:text-white transition-all duration-300 cursor-pointer group"
-                  >
-                    <Icon className="w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
-                  </div>
-                )
-              )}
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-[#ff7a00]/30 hover:border-[#ff7a00] hover:bg-[#ff7a00]/10 text-[#ff7a00] hover:text-white transition-all duration-300 cursor-pointer group">
+                  <FaXTwitter className="w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61578679877181&rdid=EAplQWYmucFMoxqR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Ld3niCwrR%2F#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-[#ff7a00]/30 hover:border-[#ff7a00] hover:bg-[#ff7a00]/10 text-[#ff7a00] hover:text-white transition-all duration-300 cursor-pointer group">
+                  <FaFacebookF className="w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/nexttradeforex/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-[#ff7a00]/30 hover:border-[#ff7a00] hover:bg-[#ff7a00]/10 text-[#ff7a00] hover:text-white transition-all duration-300 cursor-pointer group">
+                  <FaInstagram className="w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
+                </div>
+              </a>
+              <a
+                href="https://wa.me/919075559971"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-[#ff7a00]/30 hover:border-[#ff7a00] hover:bg-[#ff7a00]/10 text-[#ff7a00] hover:text-white transition-all duration-300 cursor-pointer group">
+                  <FaWhatsapp className="w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
+                </div>
+              </a>
             </div>
           </div>
 
@@ -55,44 +77,79 @@ const Footer = () => {
             {/* Services */}
             <div className="flex flex-col gap-3">
               <p className="text-white font-semibold text-lg pb-2">Services</p>
-              {[
-                "Next Trade Automation",
-                "Trading Tools",
-                "Next Trade Indicator",
-                "Education",
-              ].map((item, i) => (
-                <p
-                  key={i}
-                  className="text-sm hover:text-[#ff7a00] cursor-pointer transition-colors duration-300"
-                >
-                  {item}
-                </p>
-              ))}
+
+              <Link
+                to="/automation"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Next Trade Automation
+              </Link>
+              <Link
+                to="/strategy"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Trading Strategy
+              </Link>
+              <Link
+                to="/tools"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Trading Tools
+              </Link>
+              <Link
+                to="/forexeducation"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Education
+              </Link>
+              <Link
+                to="/whitelabel"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                White Label
+              </Link>
             </div>
 
             {/* Navigation */}
             <div className="flex flex-col gap-3">
-              <p className="text-white font-semibold text-lg pb-2">
-                Navigation
-              </p>
-              {["Features", "How it Works", "Testimonials", "FAQs"].map(
-                (item, i) => (
-                  <p
-                    key={i}
-                    className="text-sm hover:text-[#ff7a00] cursor-pointer transition-colors duration-300"
-                  >
-                    {item}
-                  </p>
-                )
-              )}
+              <p className="text-white font-semibold text-lg pb-2">Navigation</p>
 
-              {/* Added Privacy & Terms */}
-              <p className="text-sm hover:text-[#ff7a00] cursor-pointer transition-colors duration-300">
-                Privacy Policy
-              </p>
-              <p className="text-sm hover:text-[#ff7a00] cursor-pointer transition-colors duration-300">
+              <Link
+                to="/terms"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
                 Terms & Conditions
-              </p>
+              </Link>
+              <Link
+                to="/privacy"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/refund"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Refund Policy
+              </Link>
+              <Link
+                to="/disclaimer"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Disclaimer
+              </Link>
+              <Link
+                to="/cookies"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Cookies Policy
+              </Link>
+              <Link
+                to="/affiliate"
+                className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
+              >
+                Affiliate
+              </Link>
             </div>
 
             {/* Contact Section */}
@@ -117,10 +174,10 @@ const Footer = () => {
                   <FiPhone size={20} />
                 </div>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919075559971"
                   className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300"
                 >
-                  +91 98765 43210
+                  +91 9075559971
                 </a>
               </div>
 
@@ -130,10 +187,10 @@ const Footer = () => {
                   <FiMail size={20} />
                 </div>
                 <a
-                  href="mailto:support@nextradete.co.in"
+                  href="mailto:support@nexttrade.co.in"
                   className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300"
                 >
-                  support@nextradete.co.in
+                  support@nexttrade.co.in
                 </a>
               </div>
             </div>
@@ -144,11 +201,19 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center flex-wrap gap-4 text-sm relative z-10 border-t border-white/10">
         <p>
-          © {new Date().getFullYear()} Next Trade Technologies — All Rights
-          Reserved
+          © {new Date().getFullYear()} NEXTTRADE TECHNOLOGIES PVT LTD — All
+          Rights Reserved
         </p>
         <p className="text-[#ff7a00] italic font-medium tracking-wide hover:tracking-widest transition-all duration-500">
-          ✦ Developed by <span className="font-semibold">Subhajit</span>
+          ✦ Developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/codersubha"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold hover:text-white transition-colors"
+          >
+            Subhajit
+          </a>
         </p>
       </div>
     </footer>

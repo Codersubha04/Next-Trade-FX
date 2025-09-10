@@ -8,11 +8,11 @@ const Accordion = () => {
     {
       question: 'What does "X signals per month" mean?',
       answer:
-        "A signal is one command to open or close a trade with PlugPine.\n\nFor example: With the Plus plan you can open and close 125 trades per month (combined) on as many accounts and as many strategies as you like.",
+        "A signal is one command to open or close a trade with NextTrade fx.\n\nFor example: With the Plus plan you can open and close 125 trades per month (combined) on as many accounts and as many strategies as you like.",
     },
     {
       question: "How does it work?",
-      answer: `Very simple!\n\nFirst of all activate your PlugPine subscription of course. Then it works like this:\n\n1. Just choose a strategy/indicator you want to automate\n2. Use our AutoTradeGPT to transform it automatically into an auto trading robot (or manually)\n3. Create an alert in TradingView to send signals\n4. Install MetaTrader 4 and log into your trading account\n5. Drop our EA on the chart and activate live trading – That’s it!`,
+      answer: `Very simple!\n\nFirst of all activate your NextTrade fx subscription of course. Then it works like this:\n\n1. Just choose a strategy/indicator you want to automate\n2. Use our AutoTradeGPT to transform it automatically into an auto trading robot (or manually)\n3. Create an alert in TradingView to send signals\n4. Install MetaTrader 4 and log into your trading account\n5. Drop our EA on the chart and activate live trading – That’s it!`,
     },
     {
       question: "Does it work with my broker?",
@@ -59,7 +59,7 @@ const Accordion = () => {
             href="mailto:support@nextradete.co.in"
             className="text-[#00C853] font-semibold hover:text-[#FF7A00] transition-all duration-300 hover:underline hover:decoration-2"
           >
-            support@nextradete.co.in
+            support@nexttrade.co.in
           </a>
         </p>
       </div>

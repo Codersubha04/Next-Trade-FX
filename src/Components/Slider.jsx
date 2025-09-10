@@ -112,7 +112,7 @@ export default function Testimonials() {
                       className="drop-shadow-md"
                     />
                   </h3>
-                  <p className="text-sm text-gray-400">{t.role}</p>
+                  {/* <p className="text-sm text-gray-400">{t.role}</p>  */}
                 </div>
 
                 {/* Verified Badge */}
