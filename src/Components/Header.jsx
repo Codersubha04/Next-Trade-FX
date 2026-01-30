@@ -12,9 +12,9 @@ const menuItems = [
     name: "Our Services",
     submenu: [
       { name: "Next Trade Automation", path: "/automation" },
-      { name: "Trading Strategy", path: "/strategy" },
-      { name: "Trading Tools", path: "/tools" },
-      { name: "Educations", path: "/ForexEducation" },
+      // { name: "Trading Strategy", path: "/strategy" },
+      { name: "Softwere Tools", path: "/tools" },
+      { name: "Educations", path: "/educations" },
     ],
   },
   { name: "Packages", path: "/package" },
@@ -143,13 +143,13 @@ const Header = () => {
 
               {/* Button */}
               <motion.div whileHover={{ scale: 1.08, y: -2 }}>
-                <Link to="/">
+                <Link to="/automation">
                   <button
                     className="bg-gradient-to-r from-[#00C853] to-[#00E676] text-white px-6 py-2 rounded-md 
                     font-medium shadow-lg transition-all duration-500 ease-in-out 
                     hover:shadow-[0_0_25px_#FF8C42] hover:from-[#FF8C42] hover:to-[#FF6A00]"
                   >
-                    Watch Showcase
+                    Explore Automation Features
                   </button>
                 </Link>
               </motion.div>
@@ -202,10 +202,11 @@ const Header = () => {
                 </motion.div>
               ))}
               <motion.div whileHover={{ scale: 1.06, y: -2 }}>
-                <Link to="/wttbot1">
+                <Link to="/package">
                   <button
-                    className="bg-[#00C896] mt-4 text-white text-base font-medium py-2 px-10 rounded-md 
-                    transition-all duration-500 ease-in-out hover:bg-[#FF8C42] hover:shadow-lg hover:shadow-orange-500/30"
+                    className="bg-gradient-to-r from-[#00C853] to-[#00E676] text-white px-6 py-2 rounded-md 
+                    font-medium shadow-lg transition-all duration-500 ease-in-out 
+                    hover:shadow-[0_0_25px_#FF8C42] hover:from-[#FF8C42] hover:to-[#FF6A00]"
                   >
                     Get Started
                   </button>

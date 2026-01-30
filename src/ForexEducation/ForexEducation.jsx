@@ -2,7 +2,9 @@ import React from "react";
 import Header from "../Components/Header";
 import images from "../assets/Images.png";
 import forex from "../assets/forex.svg";
-import imgReplace1 from "../assets/imgReplace1.png";
+import imgReplace1 from "../assets/Intro.png";
+import imgReplace2 from "../assets/Auto.png";
+import imgReplace3 from "../assets/Auto2.png";
 import Accordion from "../Components/Accordion";
 import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
@@ -90,7 +92,7 @@ const FreeForex = () => {
           <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
             Next Trade{" "}
             <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
-              Forex Traning
+              Automation Hub
             </span>
           </h1>
         </div>
@@ -127,8 +129,8 @@ const FreeForex = () => {
             transition={{ delay: 0.4 }}
           >
             Master the Art of <br />
-            Forex Trading with <br />
-            <span className="text-[#FF7A00]">Next Trade FX</span>
+            Trading Automation with <br />
+            <span className="text-[#FF7A00]">Next Trade </span>
           </motion.h2>
 
           <motion.p
@@ -138,11 +140,13 @@ const FreeForex = () => {
             transition={{ delay: 0.6 }}
           >
             At{" "}
-            <span className="text-[#FF7A00] font-semibold">Next Trade FX</span>,
-            we provide premium mentorship designed to take you from beginner to
-            profitable trader. With our proven strategies, live training
-            sessions, and expert guidance, you’ll gain the skills and confidence
-            needed to trade the markets like a pro.
+            <span className="text-[#FF7A00] font-semibold">
+              Next Trade Autiomation Hub
+            </span>
+            , we offer specialized mentorship in automated & algorithmic
+            trading. With practical strategies, live sessions, and expert
+            guidance, we help you harness automation and trade the markets
+            smarter, faster, and more profitably.
           </motion.p>
 
           <motion.div
@@ -150,9 +154,11 @@ const FreeForex = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
           >
+            <a href="/package" rel="noopener noreferrer">
             <button className="flex items-center gap-2 text-white font-bold text-base leading-8 unv bg-[#FF7A00] hover:bg-[#e96a00] px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
               Join Community <ArrowRight size={18} />
             </button>
+            </a>
           </motion.div>
         </motion.div>
 
@@ -228,7 +234,7 @@ const FreeForex = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="text-[50px] md:text-[42px] sm:text-[36px] leading-[1.2] text-center font-semibold text-white mb-14"
           >
-            What You'll Learn
+            What You'll Master
           </motion.p>
 
           {/* Top Card */}
@@ -251,11 +257,10 @@ const FreeForex = () => {
             <div className="flex flex-col gap-6 my-auto">
               <p className="text-white font-semibold text-[21px] leading-[27px]">
                 <span className="inline-block w-2.5 h-2.5 mr-2 rounded-full bg-[#FF7A00] shadow-[0_0_14px_#FF7A00]"></span>
-                Introduction to Forex
+                Introduction to Automation
               </p>
               <p className="text-[#A1A1AA] text-base leading-7">
-                Understand what Forex trading is, how the market operates, and
-                the benefits of trading currencies.
+                Understand the fundamentals of 24/7 trading automation and how Next Trade FX simplifies order execution.
               </p>
             </div>
           </motion.div>
@@ -276,15 +281,14 @@ const FreeForex = () => {
               <div className="flex flex-col gap-4">
                 <p className="text-white font-semibold text-[21px] leading-[27px]">
                   <span className="inline-block w-2.5 h-2.5 mr-2 rounded-full bg-[#FF7A00] shadow-[0_0_12px_#FF7A00]"></span>
-                  Basic Terminology
+                  Automation Essentials
                 </p>
                 <p className="text-[#A1A1AA] text-base leading-7">
-                  Familiarize yourself with essential trading terms such as
-                  pips, spreads, leverage, and margins.
+                  Get familiar with key automation concepts, system triggers, APIs, and workflow setups.
                 </p>
               </div>
               <img
-                src={imgReplace1}
+                src={imgReplace2}
                 alt=""
                 className="w-[110px] h-[110px] rounded-lg object-cover mt-4"
               />
@@ -304,15 +308,14 @@ const FreeForex = () => {
               <div className="flex flex-col gap-4">
                 <p className="text-white font-semibold text-[21px] leading-[27px]">
                   <span className="inline-block w-2.5 h-2.5 mr-2 rounded-full bg-[#FF7A00] shadow-[0_0_12px_#FF7A00]"></span>
-                  Market Participants
+                  Automation Ecosystem
                 </p>
                 <p className="text-[#A1A1AA] text-base leading-7">
-                  Learn about the key players in the Forex market, including
-                  banks, institutions, retail traders, and more.
+                  Learn about integration points, brokers, signals, and how automated systems interact in real-time.
                 </p>
               </div>
               <img
-                src={imgReplace1}
+                src={imgReplace3}
                 alt=""
                 className="w-[110px] h-[110px] rounded-lg object-cover mb-4"
               />
@@ -323,18 +326,18 @@ const FreeForex = () => {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Analyzing the Market",
-                desc: "Explore basic analysis techniques, including technical and fundamental analysis, to help you make informed trading decisions.",
+                title: "Monitoring & Analytics",
+                desc: "Learn to track automated system performance, signal accuracy, and trade outcomes.",
                 glow: "#00C853",
               },
               {
-                title: "Trading Platforms",
-                desc: "Get an overview of popular trading platforms and how to use them to execute trades.",
+                title: "Integration Tools",
+                desc: "Overview of platform connections, API workflows, and seamless automation setups.",
                 glow: "#FF7A00",
               },
               {
-                title: "Risk Management",
-                desc: "Discover the importance of risk management and how to protect your trading capital.",
+                title: "Safe Automation Practices",
+                desc: "Implement safeguards, error handling, and system alerts to protect capital and ensure reliable automation",
                 glow: "#00C853",
               },
             ].map((card, i) => (
@@ -379,7 +382,7 @@ const FreeForex = () => {
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
           </span>{" "}
-          FX Hub Today
+          Hub Today
         </h2>
 
         {/* Subheading */}

@@ -47,7 +47,7 @@ export default function TrustedBy() {
           transition={{ duration: 0.4 }}
           className="bg-gradient-to-r from-[#FF7A00] to-[#FFC107] text-xs px-5 py-1.5 rounded-full uppercase tracking-wider font-semibold text-white shadow-md"
         >
-          Why Next Trade FX
+          Why Next Trade
         </motion.button>
 
         <motion.h2
@@ -65,7 +65,7 @@ export default function TrustedBy() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Next Trade FX has earned trust by delivering transparent, high-performance trading automation to users worldwide.
+          Next Trade has earned trust by delivering transparent, high-performance trading automation to users worldwide.
         </motion.p>
       </div>
 

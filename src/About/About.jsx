@@ -5,7 +5,7 @@ import { ShieldCheck, LineChart, Settings } from "lucide-react"; // Premium mode
 import { Lightbulb, Handshake, ClipboardCheck, Rocket } from "lucide-react";
 
 import Header from "../Components/Header";
-import crypto from "../assets/crypto.svg";
+import AutomationAi from "../assets/Automation.webp";
 import ceo from "../assets/DSC_4101T.jpg";
 import Accordion from "../Components/Accordion";
 import Footer from "../Components/Footer";
@@ -178,7 +178,7 @@ const About = () => {
           <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
-              Next Trade FX
+              Next Trade
             </span>
           </h2>
 
@@ -497,7 +497,7 @@ const About = () => {
               Our Mission
             </p>
             <h2 className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
-              Next Trade FX’s <span className="text-[#FF7A00]">Mission</span>
+              Next Trade <span className="text-[#FF7A00]">Mission</span>
             </h2>
 
             <p className="text-[#A1A1AA] text-lg max-w-2xl mt-4">
@@ -508,7 +508,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-8 mx:mt-6">
+          {/* <div className="mt-8 mx:mt-6">
             <button
               onClick={() => (window.location.href = "/about1")}
               className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] text-white 
@@ -517,7 +517,7 @@ const About = () => {
             >
               Learn More
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Mission Points with Animation */}
@@ -563,7 +563,7 @@ const About = () => {
           {/* Right Image */}
           <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
             <img
-              src={crypto}
+              src={AutomationAi}
               alt="Next Trade FX Mission"
               className="w-[85%] rounded-2xl shadow-[0_0_25px_rgba(255,122,0,0.3)] hover:scale-105 transition-all duration-500"
             />
@@ -583,7 +583,7 @@ const About = () => {
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
           </span>{" "}
-          FX Hub Today
+          Hub Today
         </h2>
 
         {/* Subheading */}

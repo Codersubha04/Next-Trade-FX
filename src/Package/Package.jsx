@@ -6,16 +6,15 @@ import Slider from "../Components/Slider";
 import Accordion from "../Components/Accordion";
 import Footer from "../Components/Footer";
 import { Users, Smile, TrendingUp, Award } from "lucide-react";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 
 const plans = [
   {
     name: "Starter",
-    subtitle:
-      "For Traders who are looking to get started with trading automation.",
+    subtitle: "24/7 AUTOMATION INTEGRATION & INSTALLATION SOFTWARE.",
     price: "₹12,000",
-    offerPrice: "₹9,000",
+    offerPrice: "₹8,300",
     features: [
-      "XAUUSD",
       "Any MT4/MT5 Broker",
       "Unlimited Signals",
       "24/7 Fully Automated Trade",
@@ -25,11 +24,10 @@ const plans = [
   },
   {
     name: "Advanced",
-    subtitle: "For intermediate traders who want serious automation.",
+    subtitle: "24/7 AUTOMATION INTEGRATION & INSTALLATION SOFTWARE.",
     price: "₹15,000",
     offerPrice: "₹12,000",
     features: [
-      "XAUUSD + BTCUSD",
       "Any MT4/MT5 Broker",
       "Unlimited Signals",
       "24/7 Fully Automated Trade",
@@ -39,11 +37,10 @@ const plans = [
   },
   {
     name: "Professional",
-    subtitle: "For advanced traders with ANY TWO MT4/MT5 trading accounts.",
+    subtitle: "24/7 AUTOMATION INTEGRATION & INSTALLATION SOFTWARE.",
     price: "₹18,000",
     offerPrice: "₹15,000",
     features: [
-      "XAUUSD + BTCUSD + ANY CURRENCY PAIRS + US30",
       "Any MT4/MT5 Broker",
       "Unlimited Signals",
       "24/7 Fully Automated Trade",
@@ -84,7 +81,7 @@ const PricingSection = () => {
         {/* 🔹 Contact Us Text */}
         <div className="relative flex justify-center items-center text-center">
           <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-            Pricing{" "}
+            Softwere Pricing{" "}
             <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
               Plan
             </span>
@@ -158,34 +155,44 @@ const PricingSection = () => {
                 </ul>
 
                 {/* CTA */}
-                <motion.button
-                  whileHover={{
-                    scale: 1.08,
-                    boxShadow: "0 0 25px rgba(255,122,0,0.7)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 rounded-full font-semibold transition-all ${
-                    plan.highlight
-                      ? "bg-white text-[#FF7A00] hover:bg-[#f5f5f5]"
-                      : "bg-gradient-to-r from-[#FF7A00] to-[#00C853] text-white hover:from-[#FF9F00] hover:to-[#00FF70]"
-                  }`}
-                >
-                  GET ACCESS
-                </motion.button>
+                <a href="/payment">
+                  <motion.button
+                    whileHover={{
+                      scale: 1.08,
+                      boxShadow: "0 0 25px rgba(255,122,0,0.7)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-full py-3 rounded-full font-semibold transition-all ${
+                      plan.highlight
+                        ? "bg-white text-[#FF7A00] hover:bg-[#f5f5f5]"
+                        : "bg-gradient-to-r from-[#FF7A00] to-[#00C853] text-white hover:from-[#FF9F00] hover:to-[#00FF70]"
+                    }`}
+                  >
+                    GET ACCESS
+                  </motion.button>
+                </a>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
 
         {/* Footer Text */}
-        <div className="text-center text-white/60 mt-12 max-w-2xl mx-auto">
-          <p>
-            All plans include seamless integration with MetaTrader terminals and
-            24/7 trading automation.
-          </p>
-          <p className="mt-2 text-sm">➕ MT4/5 & Delta Exchange</p>
-          <p className="mt-1 text-[#FF7A00] font-semibold">
-            NextTradeFX - Automate Your Forex Trading
+        <div className="text-center text-white/60 mt-12 max-w-5xl mx-auto">
+          <div className="flex items-center justify-center gap-10">
+            <p className="flex items-center gap-2 whitespace-nowrap text-sm">
+              <AiOutlineInfoCircle className="text-[#FF7A00]" />
+              The software mentioned prices are exclusive of 18% GST
+            </p>
+
+            <p className="flex items-center gap-2 whitespace-nowrap text-sm">
+              <AiOutlineInfoCircle className="text-[#FF7A00]" />
+              All plans include seamless integration with our support and 24/7
+              Automation.
+            </p>
+          </div>
+
+          <p className="mt-2 text-[#FF7A00] font-semibold">
+            NextTrade – We Provide only 24/7 Automation Software Services
           </p>
         </div>
       </section>

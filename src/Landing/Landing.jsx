@@ -2,16 +2,16 @@ import React from "react";
 import Header from "../Components/Header";
 import Bitcoin from "../assets/Bitcoin.svg";
 import Etherium from "../assets/Etherium.svg";
-import Chart from "../assets/chart.svg";
+import Chart from "../assets/chart.webp";
 import tick from "../assets/tick.svg";
-import toFro from "../assets/toFro.svg";
-import arrow from "../assets/Stroke 1.svg";
-import forex from "../assets/forex.svg";
-import vip from "../assets/vip.svg";
-import deltaLogo from "../assets/DI_(1)-c0662071-33e9-4e7f-ae83-1e78a98e3423.png";
-import crypto from "../assets/crypto.svg";
+// import toFro from "../assets/toFro.svg";
+// import arrow from "../assets/Stroke 1.svg";
+// import forex from "../assets/forex.svg";
+// import vip from "../assets/vip.svg";
+// import deltaLogo from "../assets/DI_(1)-c0662071-33e9-4e7f-ae83-1e78a98e3423.png";
+import AutomationAI from "../assets/Automation.webp";
 import research from "../assets/research.svg";
-import Youtube from "../assets/Youtube.svg";
+// import Youtube from "../assets/Youtube.svg";
 // import { useState } from "react";
 import Accordion from "../Components/Accordion";
 import Slider from "../Components/Slider";
@@ -19,10 +19,10 @@ import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
 import ModernServicesSection from "../Components/ModernServicesSection";
 import { motion } from "framer-motion";
-import FeatureSection from "../Components/FeatureSectionDemo";
+// import FeatureSection from "../Components/FeatureSectionDemo";
 
 import WorkflowSteps from "../Components/WorkflowSteps";
-import PremiumProducts from "../Components/PremiumProducts";
+// import PremiumProducts from "../Components/PremiumProducts";
 
 const Landing = () => {
   const nav = useNavigate();
@@ -61,60 +61,57 @@ const Landing = () => {
             className="text-white text-sm px-6 py-1 rounded-full font-medium 
                  border border-[#FF7A00] bg-black/30 backdrop-blur-sm shadow-[0_0_15px_#FF7A00]/30"
           >
-            Introducing AI-Powered Trade Insights & Instant Order Execution →
+            AI-Powered 24/7 Trading Automation • Instant Execution →
           </p>
 
           {/* Heading */}
           <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-            Achieve Financial Excellence <br />
+            24/7 Automated Software
+            <br />
             with{" "}
             <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
               Next Trade
             </span>{" "}
-            FX
           </h1>
         </div>
         {/* New Description + Buttons + Stats */}
         <div className="relative text-center mt-[3rem] px-6">
           {/* Description */}
           <p className="text-white/70 max-w-2xl mx-auto text-lg mb-8">
-            Featuring our trusted{" "}
+            NextTrade is India's{" "}
             <span className="italic font-medium">
-              TradingView to MetaTrader Bridge
+              largest API Bridge (automated) platform
             </span>
-            , detailed{" "}
-            <span className="italic font-medium">Account Analytics</span>,
-            flexible
-            <span className="italic font-medium"> No-Code Tasks</span>, and
-            real-time
-            <span className="italic font-medium">
-              {" "}
-              Email + Telegram Notifications
-            </span>
-            .
+            , offering seamless{" "}
+            <span className="italic font-medium">integration of multiple</span>,
+            APIs
+            <span className="italic font-medium"> through a secure</span>, and
+            reliable
+            <span className="italic font-medium"> Webhook system.</span>.
           </p>
 
           {/* Buttons */}
           <div className="flex justify-center gap-4 mb-12 mt-[3rem]">
             <a
-              href="https://www.delta.exchange/?code=NEXT20" // apna link dalna
-              target="_blank"
+              href="/package" // apna link dalna
               rel="noopener noreferrer"
             >
               <button
                 className="bg-gradient-to-r from-[#FF7A00] to-[#ff9900] text-white px-6 py-2 rounded-md 
                font-medium shadow-lg hover:shadow-[0_0_20px_#FF7A00] hover:scale-105 transition-all"
               >
-                Open Delta Exchange Free Account
+                Get 24/7 Automated Software
               </button>
             </a>
 
-            <button
-              className="bg-gradient-to-r from-[#00C853] to-[#00e676] text-white px-6 py-2 rounded-md 
+            <a href="/automation" rel="noopener noreferrer">
+              <button
+                className="bg-gradient-to-r from-[#00C853] to-[#00e676] text-white px-6 py-2 rounded-md 
                          font-medium shadow-lg hover:shadow-[0_0_20px_#00C853] hover:scale-105 transition-all"
-            >
-              Watch Showcase
-            </button>
+              >
+                Explore Automation Features
+              </button>
+            </a>
           </div>
 
           {/* Rotating Coins */}
@@ -133,11 +130,12 @@ const Landing = () => {
           <div className="flex flex-wrap justify-center gap-10 text-white/80 text-sm">
             <div className="flex items-center gap-2">
               <span className="text-green-500 text-lg">✔</span>
-              Trusted by 45,342 top traders worldwide
+              Trusted by over 45,000 automated trading users
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500 text-lg">✔</span>
-              &gt;138 million signals processed
+              &gt;Millions of signals processed in real-time
+
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500 text-lg">✔</span>
@@ -150,13 +148,13 @@ const Landing = () => {
       {/* About Section for Next Trade FX */}
       <div className="flex mx:flex-col mx:gap-4 mx:px-0 mx:justify-center mx:items-center px-[7rem] justify-between bg-[#0D0F11] py-16 mx:py-10 gap-[5rem]">
         {/* Left Image */}
-        <img src={Chart} alt="" className="w-[48%] mx:w-[80%] my-auto" />
+        <img src={Chart} alt="" className="w-[48%] mx:w-[80%] my-auto rounded-[20px]" />
 
         {/* Right Content */}
         <div className="flex flex-col mx:justify-center mx:items-center mx:gap-8 gap-5">
           {/* Small Heading */}
           <p className="text-lg font-medium int leading-6 text-[#FF7A00]">
-            About Next Trade FX
+            About Next Trade
           </p>
 
           {/* Main Heading */}
@@ -167,7 +165,7 @@ const Landing = () => {
           {/* Description */}
           <p className="text-[#A1A1AA] mx:text-center int mx:text-[12px] mx:leading-5 text-[17px] font-normal leading-7 border-b-[1px] border-b-[#272626] pb-6">
             At{" "}
-            <span className="text-[#FF7A00] font-semibold">Next Trade FX</span>,
+            <span className="text-[#FF7A00] font-semibold">Next Trade</span>,
             we empower traders with cutting-edge <br />
             AI-powered insights, lightning-fast trade execution, and <br />
             real-time analytics to maximize your market potential.
@@ -282,7 +280,7 @@ const Landing = () => {
       </section> */}
 
       <section className="relative z-10 bg-[#0D0F11] py-20 px-6 overflow-hidden">
-        <PremiumProducts />
+        {/* <PremiumProducts /> */}
         <ModernServicesSection />
       </section>
       <div className="bg-[#0D0F11] py-20 mx:py-10 select-none">
@@ -311,9 +309,11 @@ const Landing = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
+            <a href="/educations" rel="noopener noreferrer">
             <button className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] int text-white text-base font-medium leading-8 py-2 px-10 rounded-md hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all">
               Learn More
             </button>
+            </a>
           </motion.div>
         </div>
 
@@ -365,9 +365,9 @@ const Landing = () => {
           </div>
 
           <motion.img
-            src={crypto}
+            src={AutomationAI}
             alt="Trading Academy"
-            className="mx:w-[90%] rounded-xl shadow-lg"
+            className="mx:w-[90%] rounded-xl shadow-lg w-[45%] my-auto"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -404,7 +404,7 @@ const Landing = () => {
           {/* Description */}
           <p className="text-[#A1A1AA] mx:text-center int mx:text-[12px] mx:leading-5 text-[17px] font-normal leading-7 border-b-[1px] border-b-[#272626] pb-6">
             At{" "}
-            <span className="text-[#FF7A00] font-semibold">Next Trade FX</span>,
+            <span className="text-[#FF7A00] font-semibold">Next Trade</span>,
             we simplify analytics so you can focus on what matters most —
             growth. <br />
             Tracking performance, monitoring trades, and analyzing market
@@ -448,7 +448,7 @@ const Landing = () => {
           {/* CTA Button */}
           <div>
             <button
-              onClick={() => nav("/analytics")}
+              onClick={() => nav("/automation")}
               className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] int text-white text-base 
                  font-medium leading-8 py-2 px-10 rounded-md 
                  hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all"
@@ -524,7 +524,7 @@ const Landing = () => {
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
           </span>{" "}
-          FX Hub Today
+          Hub Today
         </h2>
 
         {/* Subheading */}

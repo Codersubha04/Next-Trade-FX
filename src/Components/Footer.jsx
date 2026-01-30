@@ -27,8 +27,7 @@ const Footer = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff7a00] to-[#ff7a00]/80 font-semibold">
                 Next Trade Technologies
               </span>
-              , we empower traders with premium tools, expert mentorship, and
-              real-time market insights to maximize your trading potential.
+              , we provide advanced trading automation and real-time insights to help traders perform smarter, 24/7 performance with ease.
             </p>
 
             {/* Social Media Icons */}
@@ -84,20 +83,20 @@ const Footer = () => {
               >
                 Next Trade Automation
               </Link>
-              <Link
+              {/* <Link
                 to="/strategy"
                 className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
               >
                 Trading Strategy
-              </Link>
+              </Link> */}
               <Link
                 to="/tools"
                 className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
               >
-                Trading Tools
+                Softwere Tools
               </Link>
               <Link
-                to="/forexeducation"
+                to="/educations"
                 className="text-sm hover:text-[#ff7a00] transition-colors duration-300"
               >
                 Education
@@ -164,7 +163,7 @@ const Footer = () => {
                   <FiMapPin size={20} />
                 </div>
                 <p className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300">
-                  Salt Lake, Sector V, Kolkata, India
+                  Mumbai, Maharashtra, India
                 </p>
               </div>
 

@@ -15,6 +15,8 @@ import WhiteLebel from './WhiteLebel/WhiteLebel';
 import WttBot from './WttBot/WttBot';
 import Contact from './Contact/Contact';
 import Package from './Package/Package';
+import Payment from './Payment/Payment';
+
 import './App.css';
 
 
@@ -59,7 +61,7 @@ function App() {
             <Route path="/" element={<PageTransition><Landing /></PageTransition>} />
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
             <Route path="/mentorship" element={<PageTransition><Mentorship /></PageTransition>} />
-            <Route path="/forexeducation" element={<PageTransition><ForexEducation /></PageTransition>} />
+            <Route path="/educations" element={<PageTransition><ForexEducation /></PageTransition>} />
             <Route path="/automation" element={<PageTransition><Automation /></PageTransition>} />
             <Route path="/strategy" element={<PageTransition><Strategy /></PageTransition>} />
             <Route path="/tools" element={<PageTransition><Tools /></PageTransition>} />
@@ -73,6 +75,7 @@ function App() {
             <Route path="/disclaimer" element={<PageTransition><Disclaimer /></PageTransition>} />
             <Route path="/cookies" element={<PageTransition><Cookies /></PageTransition>} />
             <Route path="/affiliate" element={<PageTransition><Affiliate /></PageTransition>} />
+            <Route path="/payment" element={<PageTransition><Payment /></PageTransition>} />
 
           </Routes>
         </AnimatePresence>

@@ -27,7 +27,7 @@ const WorkflowSteps = () => {
       color: "from-[#1F51FF] to-[#00C6FF]",
     },
     {
-      title: "Next Trade FX",
+      title: "Next Trade",
       subtitle: "AI-Powered Execution",
       description: [
         "Ultra-low latency trade execution.",
@@ -185,6 +185,7 @@ const WorkflowSteps = () => {
 
       {/* CTA */}
       <div className="text-center mt-12">
+        <a href="/package" rel="noopener noreferrer">
         <button
           className="bg-gradient-to-r from-[#FF7A00] to-[#ff9900] text-white px-10 py-3 rounded-full 
              font-medium text-lg shadow-lg hover:shadow-[0_0_20px_#FF7A00] hover:scale-105 
@@ -192,6 +193,7 @@ const WorkflowSteps = () => {
         >
           Start Your Automation Journey
         </button>
+        </a>
       </div>
 
       {/* 👇 Auto-Scrolling Logo Section 👇 */}
@@ -215,7 +217,7 @@ const WorkflowSteps = () => {
       <section className="bg-[#0D0F11] py-24 px-6 text-center relative overflow-hidden">
         {/* Section Heading */}
         <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] mb-16">
-          Reality of <span className="text-[#FF7A00]">Next Trade FX</span>
+          Reality of <span className="text-[#FF7A00]">Next Trade</span>
         </h2>
 
         {/* Stats Grid */}
@@ -297,7 +299,7 @@ const logos = [
   "logo6.png",
   "logo7.png",
   "image_2024_04_04T08_41_42_698Z.avif",
-  "file_000000007c54622f9d318dbd8ccb613f__1_-removebg-preview.png",
+  // "file_000000007c54622f9d318dbd8ccb613f__1_-removebg-preview.png",
   "image_2024_04_04T08_42_21_795Z_1.png",
   "image_2024_04_04T08_42_43_703Z.png",
   "image_2024_04_04T08_43_50_150Z.png",
@@ -309,7 +311,7 @@ const logos = [
   "logo6.png",
   "logo7.png",
   "image_2024_04_04T08_41_42_698Z.avif",
-  "file_000000007c54622f9d318dbd8ccb613f__1_-removebg-preview.png",
+  // "file_000000007c54622f9d318dbd8ccb613f__1_-removebg-preview.png",
   "image_2024_04_04T08_42_21_795Z_1.png",
   "image_2024_04_04T08_42_43_703Z.png",
   "image_2024_04_04T08_43_50_150Z.png",

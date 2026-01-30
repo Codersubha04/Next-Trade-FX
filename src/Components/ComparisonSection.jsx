@@ -74,7 +74,7 @@ export default function ComparisonSection() {
         {/* With */}
         <div>
           <h3 className="text-gray-400 text-center mb-6 font-medium">
-            With Next Trade FX Automation
+            With Next Trade Automation
           </h3>
           <div className="space-y-4">
             {comparisonData.map((item, idx) => (

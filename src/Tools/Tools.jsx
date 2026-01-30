@@ -134,7 +134,7 @@ const About = () => {
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
           </span>{" "}
-          FX Hub Today
+          Hub Today
         </h2>
 
         {/* Subheading */}
