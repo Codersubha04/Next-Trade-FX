@@ -25,7 +25,7 @@ const Payment = () => {
     setTimeout(() => setToast(""), 2000);
   };
 
-  const whatsappNumber = "919503286066";
+  const whatsappNumber = "919076355531";
   const upiId = "NEXTTRADE@HDFC"; // ✅ CHANGE IF NEEDED
 
   const message = encodeURIComponent(

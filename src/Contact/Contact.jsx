@@ -93,11 +93,11 @@ const Contact = () => {
   shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(255,122,0,0.4)]
   transition-all duration-500 flex-1"
             >
-              {/* Name Input */}
+              {/* Full Name Input */}
               <div className="relative">
                 <input
                   type="text"
-                  id="name"
+                  id="fullName"
                   placeholder=" "
                   className="peer w-full px-4 pt-5 pb-2 rounded-lg 
       bg-white/10 text-white placeholder-transparent
@@ -105,13 +105,35 @@ const Contact = () => {
       focus:border-[#FF7A00] transition-all"
                 />
                 <label
-                  htmlFor="name"
+                  htmlFor="fullName"
                   className="absolute left-4 top-2.5 text-gray-400 text-sm 
       transition-all peer-placeholder-shown:top-5 
       peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
       peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#FF7A00]"
                 >
-                  Your Name
+                  Full Name
+                </label>
+              </div>
+
+              {/* Contact Number Input */}
+              <div className="relative">
+                <input
+                  type="tel"
+                  id="contactNo"
+                  placeholder=" "
+                  className="peer w-full px-4 pt-5 pb-2 rounded-lg 
+      bg-white/10 text-white placeholder-transparent
+      focus:outline-none border border-white/20 
+      focus:border-[#00C853] transition-all"
+                />
+                <label
+                  htmlFor="contactNo"
+                  className="absolute left-4 top-2.5 text-gray-400 text-sm 
+      transition-all peer-placeholder-shown:top-5 
+      peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
+      peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00C853]"
+                >
+                  Contact No
                 </label>
               </div>
 
@@ -124,39 +146,73 @@ const Contact = () => {
                   className="peer w-full px-4 pt-5 pb-2 rounded-lg 
       bg-white/10 text-white placeholder-transparent
       focus:outline-none border border-white/20 
-      focus:border-[#00C853] transition-all"
+      focus:border-[#FF7A00] transition-all"
                 />
                 <label
                   htmlFor="email"
                   className="absolute left-4 top-2.5 text-gray-400 text-sm 
       transition-all peer-placeholder-shown:top-5 
       peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
-      peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00C853]"
+      peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#FF7A00]"
                 >
-                  Your Email
+                  Email ID
                 </label>
               </div>
 
-              {/* Message Input */}
+              {/* City Input */}
               <div className="relative">
-                <textarea
-                  id="message"
+                <input
+                  type="text"
+                  id="city"
                   placeholder=" "
-                  rows={5}
                   className="peer w-full px-4 pt-5 pb-2 rounded-lg 
       bg-white/10 text-white placeholder-transparent
       focus:outline-none border border-white/20 
-      focus:border-[#FF7A00] transition-all"
+      focus:border-[#00C853] transition-all"
                 />
                 <label
-                  htmlFor="message"
+                  htmlFor="city"
                   className="absolute left-4 top-2.5 text-gray-400 text-sm 
       transition-all peer-placeholder-shown:top-5 
       peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
-      peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#FF7A00]"
+      peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00C853]"
                 >
-                  Your Message
+                  City
                 </label>
+              </div>
+
+              {/* Package Select */}
+              <div className="relative">
+                <select
+                  id="packageInterested"
+                  defaultValue=""
+                  className="w-full appearance-none px-4 pr-12 pt-8 pb-3 rounded-lg bg-white/10 text-white focus:outline-none border border-white/20 focus:border-[#FF7A00] transition-all"
+                >
+                  <option value="" disabled className="bg-[#101214] text-gray-400">
+                    Select Package
+                  </option>
+                  <option value="Starter" className="bg-[#101214] text-white">
+                    Starter
+                  </option>
+                  <option value="Advanced" className="bg-[#101214] text-white">
+                    Advanced
+                  </option>
+                  <option
+                    value="Professional"
+                    className="bg-[#101214] text-white"
+                  >
+                    Professional
+                  </option>
+                </select>
+                <label
+                  htmlFor="packageInterested"
+                  className="absolute left-4 top-2 text-[11px] uppercase tracking-[0.18em] text-gray-400"
+                >
+                  Package Interested
+                </label>
+                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/80">
+                  ▾
+                </span>
               </div>
 
               {/* Submit Button */}
@@ -169,7 +225,7 @@ const Contact = () => {
     shadow-lg overflow-hidden group transition-all"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Send Message <Send className="w-5 h-5" />
+                  Submit <Send className="w-5 h-5" />
                 </span>
                 {/* Glow effect */}
                 <span className="absolute inset-0 bg-gradient-to-r from-[#FF7A00] to-[#00C853] opacity-0 group-hover:opacity-100 blur-lg transition duration-500"></span>
@@ -218,7 +274,7 @@ const Contact = () => {
                 <Phone className="text-[#00C853] w-6 h-6" />
                 <div>
                   <p className="text-gray-400 text-sm">Phone:</p>
-                  <p className="text-white font-semibold">+91 9075559971</p>
+                  <p className="text-white font-semibold">+91 9076355531</p>
                 </div>
               </div>
 
@@ -274,18 +330,17 @@ const Contact = () => {
 
         {/* Heading */}
         <h2 className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 text-center">
-          Get Started With <br className="hidden mx:block" />
+          Start Growing With <br className="hidden mx:block" />
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
           </span>{" "}
-          Hub Today
+          Next Trade Today
         </h2>
 
         {/* Subheading */}
         <p className="text-base mx:text-sm font-normal int text-[#a1a1aa] text-center max-w-2xl z-10">
-          We are self-service data analytics software that lets you create
-          visually appealing data visualisations and insightful dashboards in
-          minutes.
+          Automate your trading workflow, manage execution faster, and stay
+          connected with the right tools and support from the Next Trade team.
         </p>
 
         {/* Email Input & Button */}

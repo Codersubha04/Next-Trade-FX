@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
               </a>
               <a
-                href="https://wa.me/919075559971"
+                href="https://wa.me/919076355531"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -173,10 +173,10 @@ const Footer = () => {
                   <FiPhone size={20} />
                 </div>
                 <a
-                  href="tel:+919075559971"
+                  href="tel:+919076355531"
                   className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300"
                 >
-                  +91 9075559971
+                  +91 9076355531
                 </a>
               </div>
 
@@ -206,12 +206,12 @@ const Footer = () => {
         <p className="text-[#ff7a00] italic font-medium tracking-wide hover:tracking-widest transition-all duration-500">
           ✦ Developed by{" "}
           <a
-            href="https://www.linkedin.com/in/codersubha"
+            href="https://skilled-va.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold hover:text-white transition-colors"
           >
-            Subhajit
+            Skilled VA
           </a>
         </p>
       </div>

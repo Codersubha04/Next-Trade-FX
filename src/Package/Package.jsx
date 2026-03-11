@@ -5,7 +5,7 @@ import Header from "../Components/Header";
 import Slider from "../Components/Slider";
 import Accordion from "../Components/Accordion";
 import Footer from "../Components/Footer";
-import { Users, Smile, TrendingUp, Award } from "lucide-react";
+import { Users, Smile, TrendingUp, Award, Send } from "lucide-react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 
 const plans = [
@@ -81,7 +81,7 @@ const PricingSection = () => {
         {/* 🔹 Contact Us Text */}
         <div className="relative flex justify-center items-center text-center">
           <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-            Softwere Pricing{" "}
+            Software Pricing{" "}
             <span className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] bg-clip-text text-transparent">
               Plan
             </span>
@@ -148,7 +148,11 @@ const PricingSection = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4 }} // ✅ Removed delay here too
                     >
-                      <AiOutlineCheckCircle className="text-[#FF7A00] text-lg animate-pulseSlow" />
+                      <AiOutlineCheckCircle
+                        className={`text-lg animate-pulseSlow ${
+                          plan.highlight ? "text-white" : "text-[#FF7A00]"
+                        }`}
+                      />
                       <span className="text-gray-200">{feature}</span>
                     </motion.li>
                   ))}
@@ -423,6 +427,133 @@ const PricingSection = () => {
 
       <Slider />
       <Accordion />
+      <section className="relative bg-[#0D0F11] px-6 py-24 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00]/10 via-transparent to-[#00C853]/10"></div>
+
+        <div className="relative z-10 mx-auto max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: -24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mx-auto mb-12 max-w-2xl text-center"
+          >
+            <h2 className="text-[#e4e4e7] unv text-[50px] font-semibold leading-[61.5px] mx:text-[36px] mx:leading-[46px]">
+              Enquiry <span className="text-[#FF7A00]">Form</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-[#A1A1AA]">
+              Share your details and package preference. Our team will contact
+              you with the right plan and onboarding support.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="rounded-[28px] border border-white/10 bg-black/30 p-8 shadow-[0_0_40px_rgba(255,122,0,0.12)] backdrop-blur-xl"
+          >
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="relative md:col-span-2">
+                <input
+                  type="text"
+                  id="packageFullName"
+                  placeholder=" "
+                  className="peer w-full rounded-lg border border-white/20 bg-white/10 px-4 pb-2 pt-5 text-white placeholder-transparent focus:border-[#FF7A00] focus:outline-none transition-all"
+                />
+                <label
+                  htmlFor="packageFullName"
+                  className="absolute left-4 top-2.5 text-sm text-gray-400 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#FF7A00]"
+                >
+                  Full Name
+                </label>
+              </div>
+
+              <div className="relative">
+                <input
+                  type="tel"
+                  id="packageContactNo"
+                  placeholder=" "
+                  className="peer w-full rounded-lg border border-white/20 bg-white/10 px-4 pb-2 pt-5 text-white placeholder-transparent focus:border-[#00C853] focus:outline-none transition-all"
+                />
+                <label
+                  htmlFor="packageContactNo"
+                  className="absolute left-4 top-2.5 text-sm text-gray-400 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00C853]"
+                >
+                  Contact No
+                </label>
+              </div>
+
+              <div className="relative">
+                <input
+                  type="email"
+                  id="packageEmail"
+                  placeholder=" "
+                  className="peer w-full rounded-lg border border-white/20 bg-white/10 px-4 pb-2 pt-5 text-white placeholder-transparent focus:border-[#FF7A00] focus:outline-none transition-all"
+                />
+                <label
+                  htmlFor="packageEmail"
+                  className="absolute left-4 top-2.5 text-sm text-gray-400 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#FF7A00]"
+                >
+                  Email ID
+                </label>
+              </div>
+
+              <div className="relative">
+                <input
+                  type="text"
+                  id="packageCity"
+                  placeholder=" "
+                  className="peer w-full rounded-lg border border-white/20 bg-white/10 px-4 pb-2 pt-5 text-white placeholder-transparent focus:border-[#00C853] focus:outline-none transition-all"
+                />
+                <label
+                  htmlFor="packageCity"
+                  className="absolute left-4 top-2.5 text-sm text-gray-400 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-[#00C853]"
+                >
+                  City
+                </label>
+              </div>
+
+              <div className="relative">
+                <select
+                  id="packageInterested"
+                  defaultValue=""
+                  className="w-full appearance-none rounded-lg border border-white/20 bg-white/10 px-4 pb-3 pt-8 text-white transition-all focus:border-[#FF7A00] focus:outline-none"
+                >
+                  <option value="" disabled className="bg-[#101214] text-gray-400">
+                    Select Package
+                  </option>
+                  <option value="Starter" className="bg-[#101214] text-white">
+                    Starter
+                  </option>
+                  <option value="Advanced" className="bg-[#101214] text-white">
+                    Advanced
+                  </option>
+                  <option value="Professional" className="bg-[#101214] text-white">
+                    Professional
+                  </option>
+                </select>
+                <label
+                  htmlFor="packageInterested"
+                  className="absolute left-4 top-2 text-[11px] uppercase tracking-[0.18em] text-gray-400"
+                >
+                  Package Interested
+                </label>
+                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/80">
+                  v
+                </span>
+              </div>
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="mt-8 flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#FF7A00] to-[#00C853] px-6 py-3 font-semibold text-white shadow-lg transition-all"
+            >
+              Submit <Send className="h-5 w-5" />
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

@@ -16,6 +16,8 @@ import WttBot from './WttBot/WttBot';
 import Contact from './Contact/Contact';
 import Package from './Package/Package';
 import Payment from './Payment/Payment';
+import FloatingContactButtons from './Components/FloatingContactButtons';
+import OfferPopup from './Components/OfferPopup';
 
 import './App.css';
 
@@ -56,29 +58,32 @@ function App() {
       {isLoading ? (
         <Loading />
       ) : (
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<PageTransition><Landing /></PageTransition>} />
-            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-            <Route path="/mentorship" element={<PageTransition><Mentorship /></PageTransition>} />
-            <Route path="/educations" element={<PageTransition><ForexEducation /></PageTransition>} />
-            <Route path="/automation" element={<PageTransition><Automation /></PageTransition>} />
-            <Route path="/strategy" element={<PageTransition><Strategy /></PageTransition>} />
-            <Route path="/tools" element={<PageTransition><Tools /></PageTransition>} />
-            <Route path="/package" element={<PageTransition><Package /></PageTransition>} />
-            <Route path="/whitelabel" element={<PageTransition><WhiteLebel /></PageTransition>} />
-            <Route path="/wttbot" element={<PageTransition><WttBot /></PageTransition>} />
-            <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-            <Route path="/terms" element={<PageTransition><TermsAndCondition /></PageTransition>} />
-            <Route path="/privacy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
-            <Route path="/refund" element={<PageTransition><RefundPolicy /></PageTransition>} />
-            <Route path="/disclaimer" element={<PageTransition><Disclaimer /></PageTransition>} />
-            <Route path="/cookies" element={<PageTransition><Cookies /></PageTransition>} />
-            <Route path="/affiliate" element={<PageTransition><Affiliate /></PageTransition>} />
-            <Route path="/payment" element={<PageTransition><Payment /></PageTransition>} />
-
-          </Routes>
-        </AnimatePresence>
+        <>
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<PageTransition><Landing /></PageTransition>} />
+              <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+              <Route path="/mentorship" element={<PageTransition><Mentorship /></PageTransition>} />
+              <Route path="/educations" element={<PageTransition><ForexEducation /></PageTransition>} />
+              <Route path="/automation" element={<PageTransition><Automation /></PageTransition>} />
+              <Route path="/strategy" element={<PageTransition><Strategy /></PageTransition>} />
+              <Route path="/tools" element={<PageTransition><Tools /></PageTransition>} />
+              <Route path="/package" element={<PageTransition><Package /></PageTransition>} />
+              <Route path="/whitelabel" element={<PageTransition><WhiteLebel /></PageTransition>} />
+              <Route path="/wttbot" element={<PageTransition><WttBot /></PageTransition>} />
+              <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+              <Route path="/terms" element={<PageTransition><TermsAndCondition /></PageTransition>} />
+              <Route path="/privacy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+              <Route path="/refund" element={<PageTransition><RefundPolicy /></PageTransition>} />
+              <Route path="/disclaimer" element={<PageTransition><Disclaimer /></PageTransition>} />
+              <Route path="/cookies" element={<PageTransition><Cookies /></PageTransition>} />
+              <Route path="/affiliate" element={<PageTransition><Affiliate /></PageTransition>} />
+              <Route path="/payment" element={<PageTransition><Payment /></PageTransition>} />
+            </Routes>
+          </AnimatePresence>
+          <OfferPopup />
+          <FloatingContactButtons />
+        </>
       )}
     </div>
   );

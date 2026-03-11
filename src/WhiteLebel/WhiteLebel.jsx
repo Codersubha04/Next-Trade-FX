@@ -844,18 +844,17 @@ const rightReveal = {
 
         {/* Heading */}
         <h2 className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 text-center">
-          Get Started With <br className="hidden mx:block" />
+          Start Growing With <br className="hidden mx:block" />
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
           </span>{" "}
-          Hub Today
+          Next Trade Today
         </h2>
 
         {/* Subheading */}
         <p className="text-base mx:text-sm font-normal int text-[#a1a1aa] text-center max-w-2xl z-10">
-          We are self-service data analytics software that lets you create
-          visually appealing data visualisations and insightful dashboards in
-          minutes.
+          Automate your trading workflow, manage execution faster, and stay
+          connected with the right tools and support from the Next Trade team.
         </p>
 
         {/* Email Input & Button */}

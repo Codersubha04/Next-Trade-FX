@@ -73,7 +73,7 @@ Welcome to NextTrade Technologies PVT Ltd, the bridge connecting Tradingview, Ch
   title: "Contact Us",
   icon: <FaPhoneAlt className="text-[#FFD700] w-7 h-7" />,
   content: `If you need further information or have any questions regarding our site's disclaimer, please contact us via email at support@nexttrade.co.in  
-Contact: +91 9075559971`,
+Contact: +91 9076355531`,
   button: {
     text: "Go to Contact Us",
     link: "/contact" // yaha tumhara contact page ka route ya anchor link
