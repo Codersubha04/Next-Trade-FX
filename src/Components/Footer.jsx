@@ -11,15 +11,15 @@ const Footer = () => {
       {/* Glow Background */}
       <div className="absolute inset-0 bg-gradient-to-tr from-[#ff7a00]/5 via-transparent to-[#ff7a00]/10 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-6 py-14 border-b border-white/10 relative z-10">
-        <div className="flex justify-between gap-16 flex-wrap">
+      <div className="max-w-7xl mx-auto px-6 py-14 border-b border-white/10 relative z-10 mx:px-4 mx:py-12">
+        <div className="flex justify-between gap-16 flex-wrap mx:flex-col mx:gap-10">
           {/* Left Side - Company Info */}
-          <div className="flex flex-col gap-6 max-w-sm">
+          <div className="flex flex-col gap-6 max-w-sm mx:max-w-[340px] mx:mx-auto mx:items-center mx:text-center">
             <Link to="/">
               <img
                 src={logo}
                 alt="Next Trade Technologies Logo"
-                className="w-48 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                className="w-48 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mx:w-40"
               />
             </Link>
             <p className="text-sm leading-6">
@@ -31,7 +31,7 @@ const Footer = () => {
             </p>
 
             {/* Social Media Icons */}
-            <div className="flex gap-5">
+            <div className="flex gap-5 mx:flex-wrap mx:justify-center">
               <a
                 href="/"
                 target="_blank"
@@ -72,10 +72,10 @@ const Footer = () => {
           </div>
 
           {/* Right Side - Links Sections */}
-          <div className="flex flex-wrap gap-16">
+          <div className="flex flex-wrap gap-16 mx:grid mx:w-full mx:max-w-[340px] mx:grid-cols-1 mx:gap-8 mx:mx-auto">
             {/* Services */}
-            <div className="flex flex-col gap-3">
-              <p className="text-white font-semibold text-lg pb-2">Services</p>
+            <div className="flex flex-col gap-3 mx:items-center mx:text-center mx:rounded-[22px] mx:border mx:border-white/10 mx:bg-white/[0.03] mx:px-4 mx:py-5">
+              <p className="text-white font-semibold text-lg pb-2 mx:pb-1">Services</p>
 
               <Link
                 to="/automation"
@@ -110,8 +110,8 @@ const Footer = () => {
             </div>
 
             {/* Navigation */}
-            <div className="flex flex-col gap-3">
-              <p className="text-white font-semibold text-lg pb-2">Navigation</p>
+            <div className="flex flex-col gap-3 mx:items-center mx:text-center mx:rounded-[22px] mx:border mx:border-white/10 mx:bg-white/[0.03] mx:px-4 mx:py-5">
+              <p className="text-white font-semibold text-lg pb-2 mx:pb-1">Navigation</p>
 
               <Link
                 to="/terms"
@@ -152,42 +152,42 @@ const Footer = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-2">
+            <div className="space-y-4 mx:space-y-3 mx:rounded-[22px] mx:border mx:border-white/10 mx:bg-white/[0.03] mx:px-4 mx:py-5">
+              <h3 className="text-lg font-semibold text-white mb-2 mx:mb-1 mx:text-center">
                 Contact Us
               </h3>
 
               {/* Location */}
-              <div className="flex items-center gap-3 group cursor-pointer">
+              <div className="flex items-center gap-3 group cursor-pointer mx:items-start">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ff7a00]/10 border border-[#ff7a00]/30 text-[#ff7a00] group-hover:bg-[#ff7a00] group-hover:text-white transition-all duration-300 shadow-md">
                   <FiMapPin size={20} />
                 </div>
-                <p className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300">
+                <p className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300 mx:text-sm mx:leading-6">
                   Mumbai, Maharashtra, India
                 </p>
               </div>
 
               {/* Phone */}
-              <div className="flex items-center gap-3 group cursor-pointer">
+              <div className="flex items-center gap-3 group cursor-pointer mx:items-start">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ff7a00]/10 border border-[#ff7a00]/30 text-[#ff7a00] group-hover:bg-[#ff7a00] group-hover:text-white transition-all duration-300 shadow-md">
                   <FiPhone size={20} />
                 </div>
                 <a
                   href="tel:+919076355531"
-                  className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300"
+                  className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300 mx:text-sm mx:leading-6"
                 >
                   +91 9076355531
                 </a>
               </div>
 
               {/* Email */}
-              <div className="flex items-center gap-3 group cursor-pointer">
+              <div className="flex items-center gap-3 group cursor-pointer mx:items-start">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ff7a00]/10 border border-[#ff7a00]/30 text-[#ff7a00] group-hover:bg-[#ff7a00] group-hover:text-white transition-all duration-300 shadow-md">
                   <FiMail size={20} />
                 </div>
                 <a
                   href="mailto:support@nexttrade.co.in"
-                  className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300"
+                  className="text-[#A1A1AA] group-hover:text-white transition-colors duration-300 mx:text-sm mx:leading-6"
                 >
                   support@nexttrade.co.in
                 </a>
@@ -198,20 +198,20 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center flex-wrap gap-4 text-sm relative z-10 border-t border-white/10">
-        <p>
+      <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center flex-wrap gap-4 text-sm relative z-10 border-t border-white/10 mx:px-4 mx:py-5 mx:flex-col mx:text-center">
+        <p className="mx:max-w-[340px] mx:leading-6">
           © {new Date().getFullYear()} NEXTTRADE TECHNOLOGIES PVT LTD — All
           Rights Reserved
         </p>
-        <p className="text-[#ff7a00] italic font-medium tracking-wide hover:tracking-widest transition-all duration-500">
-          ✦ Developed by{" "}
+        <p className="italic font-medium tracking-wide transition-all duration-500 mx:text-[13px]">
+          Designed and Developed By{" "}
           <a
             href="https://skilled-va.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold hover:text-white transition-colors"
+            className="font-semibold text-[#ff7a00] hover:text-white transition-colors"
           >
-            Skilled VA
+            Skilled Va
           </a>
         </p>
       </div>

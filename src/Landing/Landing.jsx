@@ -31,19 +31,21 @@ const Landing = () => {
     <div className="bg-black">
       <Header />
 
-      <div className="relative overflow-hidden bg-gradient-to-b from-[#0B0F19] to-[#000000] py-28">
+      <div className="relative overflow-hidden bg-gradient-to-b from-[#0B0F19] via-[#06080d] to-[#000000] py-28 mx:pt-28 mx:pb-14">
         {/* Dotted Background */}
         <div
-          className="absolute inset-0 opacity-20 bg-[radial-gradient(#FF7A00_1px,transparent_1px)] 
+          className="absolute inset-0 opacity-20 bg-[radial-gradient(#FF7A00_1px,transparent_1px)] mx:opacity-10 
                   [background-size:30px_30px]"
         ></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(255,122,0,0.22),transparent_60%)] mx:h-24" />
+        <div className="pointer-events-none absolute left-1/2 top-20 h-64 w-64 -translate-x-1/2 rounded-full bg-[#00C853]/10 blur-3xl mx:top-14 mx:h-40 mx:w-40" />
 
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(50)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-[#00C853] rounded-full opacity-30 animate-float"
+              className="absolute h-1 w-1 rounded-full bg-[#00C853] opacity-30 animate-float mx:opacity-20"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -55,17 +57,17 @@ const Landing = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative flex flex-col gap-6 justify-center items-center text-center pt-[2rem]">
+        <div className="relative flex flex-col gap-6 justify-center items-center text-center pt-[2rem] mx:gap-4 mx:px-4 mx:pt-0">
           {/* Badge */}
           <p
-            className="text-white text-sm px-6 py-1 rounded-full font-medium 
+            className="text-white text-sm px-6 py-1 rounded-full font-medium mx:max-w-[92%] mx:px-4 mx:py-2 
                  border border-[#FF7A00] bg-black/30 backdrop-blur-sm shadow-[0_0_15px_#FF7A00]/30"
           >
             AI-Powered 24/7 Trading Automation • Instant Execution →
           </p>
 
           {/* Heading */}
-          <h1 className="text-white text-[72px] leading-[86px] mx:text-[32px] mx:leading-9 font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+          <h1 className="text-white text-[72px] leading-[86px] mx:max-w-[320px] mx:text-[36px] mx:leading-[1.05] op:text-[31px] font-bold drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
             24/7 Automated Software
             <br />
             with{" "}
@@ -75,9 +77,9 @@ const Landing = () => {
           </h1>
         </div>
         {/* New Description + Buttons + Stats */}
-        <div className="relative text-center mt-[3rem] px-6">
+        <div className="relative text-center mt-[3rem] px-6 mx:mt-6 mx:px-4">
           {/* Description */}
-          <p className="text-white/70 max-w-2xl mx-auto text-lg mb-8">
+          <p className="text-white/70 max-w-2xl mx-auto text-lg mb-8 mx:max-w-[340px] mx:text-[14px] mx:leading-7 mx:mb-6">
             NextTrade is India's{" "}
             <span className="italic font-medium">
               largest API Bridge (automated) platform
@@ -91,23 +93,24 @@ const Landing = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex justify-center gap-4 mb-12 mt-[3rem]">
+          <div className="flex justify-center gap-4 mb-12 mt-[3rem] mx:mt-0 mx:mb-8 mx:flex-col mx:items-center mx:gap-3">
             <a
               href="/package" // apna link dalna
               rel="noopener noreferrer"
+              className="mx:w-full mx:max-w-[320px]"
             >
               <button
                 className="bg-gradient-to-r from-[#FF7A00] to-[#ff9900] text-white px-6 py-2 rounded-md 
-               font-medium shadow-lg hover:shadow-[0_0_20px_#FF7A00] hover:scale-105 transition-all"
+               font-medium shadow-lg hover:shadow-[0_0_20px_#FF7A00] hover:scale-105 transition-all mx:w-full mx:rounded-xl mx:px-5 mx:py-3.5 mx:text-[14px]"
               >
                 Get 24/7 Automated Software
               </button>
             </a>
 
-            <a href="/automation" rel="noopener noreferrer">
+            <a href="/automation" rel="noopener noreferrer" className="mx:w-full mx:max-w-[320px]">
               <button
                 className="bg-gradient-to-r from-[#00C853] to-[#00e676] text-white px-6 py-2 rounded-md 
-                         font-medium shadow-lg hover:shadow-[0_0_20px_#00C853] hover:scale-105 transition-all"
+                         font-medium shadow-lg hover:shadow-[0_0_20px_#00C853] hover:scale-105 transition-all mx:w-full mx:rounded-xl mx:px-5 mx:py-3.5 mx:text-[14px]"
               >
                 Explore Automation Features
               </button>
@@ -118,52 +121,56 @@ const Landing = () => {
           <img
             src={Bitcoin}
             alt=""
-            className="absolute left-10 bottom-10 w-28 animate-[spin_20s_linear_infinite]"
+            className="absolute left-10 bottom-10 w-28 animate-[spin_20s_linear_infinite] mx:hidden"
           />
           <img
             src={Etherium}
             alt=""
-            className="absolute right-10 bottom-10 w-28 animate-[spin_25s_linear_infinite]"
+            className="absolute right-10 bottom-10 w-28 animate-[spin_25s_linear_infinite] mx:hidden"
           />
 
           {/* Trusted Stats */}
-          <div className="flex flex-wrap justify-center gap-10 text-white/80 text-sm">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap justify-center gap-10 text-white/80 text-sm mx:mx-auto mx:mt-2 mx:max-w-[340px] mx:flex-col mx:gap-0 mx:overflow-hidden mx:rounded-[20px] mx:border mx:border-white/10 mx:bg-white/[0.04] mx:text-left mx:backdrop-blur-sm">
+            <div className="flex items-start gap-3 mx:border-b mx:border-white/10 mx:px-4 mx:py-3">
               <span className="text-green-500 text-lg">✔</span>
-              Trusted by over 45,000 automated trading users
+              <span className="leading-6">Trusted by over 45,000 automated trading users</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-start gap-3 mx:border-b mx:border-white/10 mx:px-4 mx:py-3">
               <span className="text-green-500 text-lg">✔</span>
-              &gt;Millions of signals processed in real-time
+              <span className="leading-6">&gt; Millions of signals processed in real-time</span>
 
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-start gap-3 mx:px-4 mx:py-3">
               <span className="text-green-500 text-lg">✔</span>
-              &lt;1 second typical latency
+              <span className="leading-6">&lt; 1 second typical latency</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* About Section for Next Trade FX */}
-      <div className="flex mx:flex-col mx:gap-4 mx:px-0 mx:justify-center mx:items-center px-[7rem] justify-between bg-[#0D0F11] py-16 mx:py-10 gap-[5rem]">
+      <div className="flex mx:flex-col mx:gap-6 mx:px-4 mx:justify-center mx:items-center px-[7rem] justify-between bg-[#0D0F11] py-16 mx:py-12 gap-[5rem]">
         {/* Left Image */}
-        <img src={Chart} alt="" className="w-[48%] mx:w-[80%] my-auto rounded-[20px]" />
+        <img
+          src={Chart}
+          alt=""
+          className="w-[48%] mx:w-full mx:max-w-[340px] my-auto rounded-[20px] mx:rounded-[24px] mx:border mx:border-white/10 mx:shadow-[0_18px_60px_rgba(0,0,0,0.35)]"
+        />
 
         {/* Right Content */}
-        <div className="flex flex-col mx:justify-center mx:items-center mx:gap-8 gap-5">
+        <div className="flex flex-col mx:w-full mx:max-w-[340px] mx:justify-center mx:items-center mx:gap-6 mx:rounded-[24px] mx:border mx:border-white/10 mx:bg-white/[0.03] mx:px-5 mx:py-6 mx:backdrop-blur-sm gap-5">
           {/* Small Heading */}
-          <p className="text-lg font-medium int leading-6 text-[#FF7A00]">
+          <p className="text-lg font-medium int leading-6 text-[#FF7A00] mx:text-sm mx:tracking-[0.14em] mx:uppercase">
             About Next Trade
           </p>
 
           {/* Main Heading */}
-          <p className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4">
+          <p className="text-[#e4e4e7] mx:text-center mx:text-[32px] mx:leading-[1.12] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 mx:my-0">
             Your Gateway to Smart Trading
           </p>
 
           {/* Description */}
-          <p className="text-[#A1A1AA] mx:text-center int mx:text-[12px] mx:leading-5 text-[17px] font-normal leading-7 border-b-[1px] border-b-[#272626] pb-6">
+          <p className="text-[#A1A1AA] mx:text-center int mx:text-[14px] mx:leading-7 text-[17px] font-normal leading-7 border-b-[1px] border-b-[#272626] pb-6 mx:pb-5">
             At{" "}
             <span className="text-[#FF7A00] font-semibold">Next Trade</span>,
             we empower traders with cutting-edge <br />
@@ -172,32 +179,32 @@ const Landing = () => {
           </p>
 
           {/* Features with Ticks */}
-          <div className="flex mx:gap-8 gap-10">
-            <div className="flex flex-col gap-4 mx:gap-6">
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+          <div className="flex mx:w-full mx:flex-col mx:gap-3 gap-10">
+            <div className="flex flex-col gap-4 mx:gap-3">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   AI-Powered Analysis
                 </p>
               </div>
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   Lightning Execution
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 mx:gap-6">
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+            <div className="flex flex-col gap-4 mx:gap-3">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   Trusted Worldwide
                 </p>
               </div>
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   Innovative Solutions
                 </p>
               </div>
@@ -205,12 +212,12 @@ const Landing = () => {
           </div>
 
           {/* CTA Button */}
-          <div>
+          <div className="mx:w-full">
             <button
               onClick={() => nav("/about")}
               className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] int text-white text-base 
                    font-medium leading-8 py-2 px-10 rounded-md 
-                   hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all"
+                   hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all mx:w-full mx:rounded-xl mx:py-3 mx:text-[15px]"
             >
               Learn More
             </button>
@@ -219,9 +226,9 @@ const Landing = () => {
       </div>
 
       {/* Workflow Section */}
-      <div className="relative bg-[#0D0F11] py-20 overflow-hidden">
+      <div className="relative bg-[#0D0F11] py-20 overflow-hidden mx:py-14">
         <div className="flex items-center justify-center">
-          <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
+          <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[31px] mx:leading-[1.15] unv text-[50px] font-semibold leading-[61.5px] mx:px-4">
             Trading Workflow <span className="text-[#FF7A00]">Automation</span>
           </h2>
         </div>
@@ -283,11 +290,11 @@ const Landing = () => {
         {/* <PremiumProducts /> */}
         <ModernServicesSection />
       </section>
-      <div className="bg-[#0D0F11] py-20 mx:py-10 select-none">
+      <div className="bg-[#0D0F11] py-20 mx:py-12 mx:px-4 select-none">
         <div className="flex mx:flex-col mx:justify-center mx:items-center mx:px-0 px-24 pb-10 justify-between">
-          <div className="flex flex-col gap-3 max-w-lg">
+          <div className="flex flex-col gap-3 max-w-lg mx:max-w-[340px] mx:items-center">
             <motion.p
-              className="text-[17px] mx:text-center text-[#FF7A00] int font-medium leading-6"
+              className="text-[17px] mx:text-center text-[#FF7A00] int font-medium leading-6 mx:text-sm mx:tracking-[0.14em] mx:uppercase"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -295,7 +302,7 @@ const Landing = () => {
               Next Trade Trading Academy
             </motion.p>
             <motion.p
-              className="text-[50px] mx:text-center unv mx:text-[32px] mx:leading-[40px] font-semibold leading-[61.5px] text-[#e4e4e7]"
+              className="text-[50px] mx:text-center unv mx:text-[31px] mx:leading-[1.12] font-semibold leading-[61.5px] text-[#e4e4e7]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -304,21 +311,21 @@ const Landing = () => {
             </motion.p>
           </div>
           <motion.div
-            className="mt-12 mx:mt-4"
+            className="mt-12 mx:mt-5 mx:w-full mx:max-w-[340px]"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a href="/educations" rel="noopener noreferrer">
-            <button className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] int text-white text-base font-medium leading-8 py-2 px-10 rounded-md hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all">
+            <button className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] int text-white text-base font-medium leading-8 py-2 px-10 rounded-md hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all mx:w-full mx:rounded-xl mx:py-3 mx:text-[15px]">
               Learn More
             </button>
             </a>
           </motion.div>
         </div>
 
-        <div className="flex mx:flex-col mx:px-0 mx:justify-center mx:items-center px-24 justify-between mx:gap-8">
-          <div className="flex flex-col gap-5 my-auto max-w-xl">
+        <div className="flex mx:flex-col-reverse mx:px-0 mx:justify-center mx:items-center px-24 justify-between mx:gap-6">
+          <div className="flex flex-col gap-5 my-auto max-w-xl mx:w-full mx:max-w-[340px] mx:gap-3">
             {[
               {
                 id: 1,
@@ -343,20 +350,20 @@ const Landing = () => {
             ].map(({ id, title, desc }) => (
               <motion.div
                 key={id}
-                className="flex gap-4 mx:flex-col mx:justify-center mx:items-center"
+                className="flex gap-4 mx:gap-3 mx:items-start mx:rounded-[20px] mx:border mx:border-white/10 mx:bg-white/[0.03] mx:px-4 mx:py-4 mx:backdrop-blur-sm"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: id * 0.15 }}
               >
-                <p className="text-[17px] text-[#FF7A00] int font-bold leading-6 flex justify-center items-center rounded-full w-8 h-8 bg-white">
+                <p className="text-[17px] text-[#FF7A00] int font-bold leading-6 flex justify-center items-center rounded-full w-8 h-8 bg-white mx:w-9 mx:h-9 mx:shrink-0">
                   {id}
                 </p>
                 <div className="flex flex-col gap-2">
-                  <p className="text-[21px] mx:text-center font-semibold unv leading-6 text-[#e4e4e7]">
+                  <p className="text-[21px] mx:text-left mx:text-[18px] font-semibold unv leading-6 text-[#e4e4e7]">
                     {title}
                   </p>
-                  <p className="text-[#A1A1AA] mx:text-center font-normal int text-base leading-7">
+                  <p className="text-[#A1A1AA] mx:text-left font-normal int text-base leading-7 mx:text-[13px] mx:leading-6">
                     {desc}
                   </p>
                 </div>
@@ -367,7 +374,7 @@ const Landing = () => {
           <motion.img
             src={AutomationAI}
             alt="Trading Academy"
-            className="mx:w-[90%] rounded-xl shadow-lg w-[45%] my-auto"
+            className="mx:w-full mx:max-w-[340px] mx:rounded-[24px] mx:border mx:border-white/10 mx:shadow-[0_18px_60px_rgba(0,0,0,0.35)] rounded-xl shadow-lg w-[45%] my-auto"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -377,7 +384,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="flex mx:flex-col mx:gap-4 mx:px-0 mx:justify-center mx:items-center px-[7rem] justify-between bg-[#0D0F11] py-16 mx:py-10 gap-[5rem] relative overflow-hidden">
+      <div className="flex mx:flex-col mx:gap-6 mx:px-4 mx:justify-center mx:items-center px-[7rem] justify-between bg-[#0D0F11] py-16 mx:py-12 gap-[5rem] relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#ff7a00]/10 via-transparent to-[#00c853]/10"></div>
 
@@ -385,24 +392,24 @@ const Landing = () => {
         <img
           src={research}
           alt="Analytics Research"
-          className="w-[48%] mx:w-[80%] my-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 relative z-10"
+          className="w-[48%] mx:w-full mx:max-w-[340px] my-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-500 relative z-10 mx:rounded-[24px] mx:border mx:border-white/10 mx:shadow-[0_18px_60px_rgba(0,0,0,0.35)]"
         />
 
         {/* Right Content */}
-        <div className="flex flex-col mx:justify-center mx:items-center mx:gap-8 gap-5 relative z-10">
+        <div className="flex flex-col mx:w-full mx:max-w-[340px] mx:justify-center mx:items-center mx:gap-6 mx:rounded-[24px] mx:border mx:border-white/10 mx:bg-white/[0.03] mx:px-5 mx:py-6 mx:backdrop-blur-sm gap-5 relative z-10">
           {/* Small Heading */}
-          <p className="text-lg font-medium int leading-6 text-[#FF7A00]">
+          <p className="text-lg font-medium int leading-6 text-[#FF7A00] mx:text-sm mx:tracking-[0.14em] mx:uppercase">
             Analytics Simplified
           </p>
 
           {/* Main Heading (same style as About Us section) */}
-          <p className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4">
+          <p className="text-[#e4e4e7] mx:text-center mx:text-[31px] mx:leading-[1.12] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 mx:my-0">
             We Make it Effortless <br />
             To Track Trading Performance
           </p>
 
           {/* Description */}
-          <p className="text-[#A1A1AA] mx:text-center int mx:text-[12px] mx:leading-5 text-[17px] font-normal leading-7 border-b-[1px] border-b-[#272626] pb-6">
+          <p className="text-[#A1A1AA] mx:text-center int mx:text-[14px] mx:leading-7 text-[17px] font-normal leading-7 border-b-[1px] border-b-[#272626] pb-6 mx:pb-5">
             At{" "}
             <span className="text-[#FF7A00] font-semibold">Next Trade</span>,
             we simplify analytics so you can focus on what matters most —
@@ -413,32 +420,32 @@ const Landing = () => {
           </p>
 
           {/* Features with Ticks (optional same as About Us) */}
-          <div className="flex mx:gap-8 gap-10">
-            <div className="flex flex-col gap-4 mx:gap-6">
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+          <div className="flex mx:w-full mx:flex-col mx:gap-3 gap-10">
+            <div className="flex flex-col gap-4 mx:gap-3">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   Performance Tracking
                 </p>
               </div>
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   Real-Time Monitoring
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 mx:gap-6">
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+            <div className="flex flex-col gap-4 mx:gap-3">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   Market Insights
                 </p>
               </div>
-              <div className="flex gap-2">
-                <img src={tick} alt="" />
-                <p className="text-lg unv font-semibold leading-5 text-white">
+              <div className="flex gap-2 mx:items-center mx:rounded-[16px] mx:border mx:border-white/8 mx:bg-white/[0.03] mx:px-3 mx:py-3">
+                <img src={tick} alt="" className="mx:h-5 mx:w-5" />
+                <p className="text-lg unv font-semibold leading-5 text-white mx:text-[15px]">
                   AI-Powered Tools
                 </p>
               </div>
@@ -446,12 +453,12 @@ const Landing = () => {
           </div>
 
           {/* CTA Button */}
-          <div>
+          <div className="mx:w-full">
             <button
               onClick={() => nav("/automation")}
               className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] int text-white text-base 
                  font-medium leading-8 py-2 px-10 rounded-md 
-                 hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all"
+                 hover:scale-105 hover:shadow-[0_0_20px_#FF7A00] transition-all mx:w-full mx:rounded-xl mx:py-3 mx:text-[15px]"
             >
               Learn More
             </button>
@@ -461,25 +468,25 @@ const Landing = () => {
 
       <Slider />
 
-      <div className="flex flex-col gap-16 py-20 bg-[#0D0F11] relative overflow-hidden">
+      <div className="flex flex-col gap-16 py-20 bg-[#0D0F11] relative overflow-hidden mx:px-4 mx:gap-10 mx:py-14">
         {/* Gradient Overlay (Still, No Animation) */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00]/10 via-transparent to-[#00C853]/10"></div>
 
         {/* Heading */}
-        <div className="flex flex-col gap-4 justify-center items-center z-10 px-6">
-          <h2 className="text-[60px] md:text-[50px] font-semibold unv leading-tight text-[#e4e4e7] text-center drop-shadow-lg">
+        <div className="flex flex-col gap-4 justify-center items-center z-10 px-6 mx:px-0">
+          <h2 className="text-[60px] md:text-[50px] font-semibold unv leading-tight text-[#e4e4e7] text-center drop-shadow-lg mx:text-[31px] mx:leading-[1.12]">
             <span className="text-[#FF7A00]">Next Trade FX</span> Videos
           </h2>
-          <p className="text-lg font-normal int leading-7 text-[#A1A1AA] max-w-3xl text-center">
+          <p className="text-lg font-normal int leading-7 text-[#A1A1AA] max-w-3xl text-center mx:max-w-[340px] mx:text-[14px] mx:leading-6">
             Explore our latest trading insights and tutorials—crafted for
             professional traders, available 24/7.
           </p>
         </div>
 
         {/* Videos Embed */}
-        <div className="flex flex-col md:flex-row px-12 md:px-20 gap-10 z-10">
+        <div className="flex flex-col md:flex-row px-12 md:px-20 gap-10 z-10 mx:px-0 mx:gap-5">
           {/* Video 1 */}
-          <div className="relative w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
+          <div className="relative w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-xl group cursor-pointer mx:rounded-[24px] mx:border mx:border-white/10">
             <iframe
               className="w-full h-full rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
               src="https://www.youtube.com/embed/kFx5eL5JtSU"
@@ -492,7 +499,7 @@ const Landing = () => {
           </div>
 
           {/* Video 2 */}
-          <div className="relative w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
+          <div className="relative w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-xl group cursor-pointer mx:rounded-[24px] mx:border mx:border-white/10">
             <iframe
               className="w-full h-full rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
               src="https://www.youtube.com/embed/BzBSgQOtC2Q"
@@ -507,19 +514,19 @@ const Landing = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center items-center z-10">
-          <button className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] text-white text-lg int font-semibold py-3 px-10 rounded-full shadow-lg hover:scale-110 hover:shadow-[0_0_30px_#FF7A00] transition-all duration-500">
+          <button className="bg-gradient-to-r from-[#FF7A00] to-[#00C853] text-white text-lg int font-semibold py-3 px-10 rounded-full shadow-lg hover:scale-110 hover:shadow-[0_0_30px_#FF7A00] transition-all duration-500 mx:w-full mx:max-w-[340px] mx:rounded-[18px] mx:px-5 mx:py-3.5 mx:text-[15px]">
             🚀 See More Videos
           </button>
         </div>
       </div>
       <Accordion />
 
-      <div className="flex flex-col items-center justify-center gap-6 pt-20 pb-16 bg-gradient-to-b from-[#0d0f11] to-[#101214] relative overflow-hidden">
+      <div className="flex flex-col items-center justify-center gap-6 pt-20 pb-16 bg-gradient-to-b from-[#0d0f11] to-[#101214] relative overflow-hidden mx:px-4 mx:pt-14 mx:pb-12">
         {/* Soft Glow Background */}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#ff7a00]/10 via-transparent to-[#00c853]/10 pointer-events-none"></div>
 
         {/* Heading */}
-        <h2 className="text-[#e4e4e7] mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 text-center">
+        <h2 className="text-[#e4e4e7] mx:text-center mx:text-[31px] mx:leading-[1.12] unv text-[50px] font-semibold leading-[61.5px] -mb-4 -mt-4 text-center">
           Start Growing With <br className="hidden mx:block" />
           <span className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-transparent bg-clip-text">
             Next Trade
@@ -528,26 +535,26 @@ const Landing = () => {
         </h2>
 
         {/* Subheading */}
-        <p className="text-base mx:text-sm font-normal int text-[#a1a1aa] text-center max-w-2xl z-10">
+        <p className="text-base mx:text-[14px] mx:leading-6 font-normal int text-[#a1a1aa] text-center max-w-2xl z-10 mx:max-w-[340px]">
           Automate your trading workflow, manage execution faster, and stay
           connected with the right tools and support from the Next Trade team.
         </p>
 
         {/* Email Input & Button */}
         {/* Email Input & Button */}
-        <div className="flex w-full max-w-lg items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full p-1 shadow-md transition-all duration-300 z-10 group focus-within:shadow-[0_0_25px_rgba(255,122,0,0.4)]">
-          <div className="relative flex-1">
+        <div className="flex w-full max-w-lg items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full p-1 shadow-md transition-all duration-300 z-10 group focus-within:shadow-[0_0_25px_rgba(255,122,0,0.4)] mx:max-w-[340px] mx:flex-col mx:items-stretch mx:gap-3 mx:rounded-[24px] mx:bg-white/[0.04] mx:p-3">
+          <div className="relative flex-1 mx:w-full">
             <input
               type="email"
               placeholder=" "
-              className="peer w-full bg-transparent outline-none px-4 py-3 text-sm text-white placeholder-transparent"
+              className="peer w-full bg-transparent outline-none px-4 py-3 text-sm text-white placeholder-transparent mx:rounded-[18px] mx:border mx:border-white/10 mx:bg-black/10"
             />
             {/* Floating Label with Smooth Transition */}
-            <label className="absolute left-4 text-[#aaa] text-sm transition-all duration-300 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-[#777] peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#00c853]">
+            <label className="absolute left-4 text-[#aaa] text-sm transition-all duration-300 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-[#777] peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#00c853] mx:left-5">
               Enter your email
             </label>
           </div>
-          <button className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-white text-sm font-semibold rounded-full px-6 py-2 hover:opacity-90 hover:scale-[1.05] transition-all duration-300">
+          <button className="bg-gradient-to-r from-[#ff7a00] to-[#00c853] text-white text-sm font-semibold rounded-full px-6 py-2 hover:opacity-90 hover:scale-[1.05] transition-all duration-300 mx:w-full mx:rounded-[18px] mx:py-3">
             Let's Go
           </button>
         </div>

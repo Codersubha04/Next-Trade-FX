@@ -39,6 +39,7 @@ function App() {
 
   useEffect(() => {
     nprogress.start();
+
     setIsLoading(true);
 
     const timer = setTimeout(() => {

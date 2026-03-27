@@ -43,17 +43,17 @@ const Accordion = () => {
   };
 
   return (
-    <div className="bg-[#0D0F11] py-16 relative overflow-hidden">
+    <div className="bg-[#0D0F11] py-16 relative overflow-hidden mx:px-4 mx:py-14">
       {/* Subtle gradient background */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-[#FF7A00]/5 via-transparent to-[#00C853]/5"></div> */}
 
       {/* Heading */}
       <div className="flex flex-col gap-4 justify-center items-center relative z-10">
-        <h2 className="text-[60px] md:text-[50px] font-semibold unv leading-tight text-[#e4e4e7] text-center drop-shadow-lg">
+        <h2 className="text-[60px] md:text-[50px] font-semibold unv leading-tight text-[#e4e4e7] text-center drop-shadow-lg mx:text-[31px] mx:leading-[1.12]">
           <span className="text-[#FF7A00]">Frequently</span> Asked Questions
         </h2>
 
-        <p className="text-base text-center font-normal leading-7 int text-[#A1A1AA]">
+        <p className="text-base text-center font-normal leading-7 int text-[#A1A1AA] mx:max-w-[340px] mx:text-[14px] mx:leading-6">
           Have a question not answered here? Contact us at{" "}
           <a
             href="mailto:support@nextradete.co.in"
@@ -65,21 +65,21 @@ const Accordion = () => {
       </div>
 
       {/* Accordion */}
-      <div className="max-w-[50rem] mx:max-w-[90%] mx-auto mt-10 flex flex-col gap-5 relative z-10">
+      <div className="max-w-[50rem] mx:max-w-[340px] mx-auto mt-10 flex flex-col gap-5 relative z-10 mx:mt-8 mx:gap-3">
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-[#101214] rounded-xl border border-transparent hover:border-[#FF7A00]/50 shadow-md hover:shadow-[0_0_20px_rgba(255,122,0,0.3)] transition-all duration-300"
+            className="bg-[#101214] rounded-xl border border-transparent hover:border-[#FF7A00]/50 shadow-md hover:shadow-[0_0_20px_rgba(255,122,0,0.3)] transition-all duration-300 mx:rounded-[20px] mx:border-white/10"
           >
             {/* Question */}
             <div
-              className="flex justify-between items-center py-4 px-6 cursor-pointer select-none"
+              className="flex justify-between items-center py-4 px-6 cursor-pointer select-none mx:items-start mx:gap-3 mx:px-4 mx:py-4"
               onClick={() => toggleAccordion(index)}
             >
-              <h3 className="text-lg font-semibold text-[#EAEAEA]">
+              <h3 className="text-lg font-semibold text-[#EAEAEA] mx:text-[15px] mx:leading-6">
                 {item.question}
               </h3>
-              <div className="text-xl">
+              <div className="text-xl mx:pt-0.5 mx:text-base">
                 {activeIndex === index ? (
                   <FaTimes className="text-[#00C853] transition-transform duration-300 rotate-90" />
                 ) : (
@@ -96,7 +96,7 @@ const Accordion = () => {
                   : "max-h-0 opacity-0 -translate-y-2"
               }`}
             >
-              <p className="text-[#A1A1AA] whitespace-pre-line text-base leading-7 px-6 pb-4">
+              <p className="text-[#A1A1AA] whitespace-pre-line text-base leading-7 px-6 pb-4 mx:px-4 mx:pb-4 mx:text-[14px] mx:leading-6">
                 {item.answer}
               </p>
             </div>

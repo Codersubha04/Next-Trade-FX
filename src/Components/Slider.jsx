@@ -42,15 +42,15 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-20 bg-[#0D0F11] text-white overflow-hidden">
+    <section className="relative py-20 bg-[#0D0F11] text-white overflow-hidden mx:px-4 mx:py-14">
       {/* Animated Heading */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-12"
+        className="text-center mb-12 mx:mb-8"
       >
-        <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
+        <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[31px] mx:leading-[1.12] unv text-[50px] font-semibold leading-[61.5px]">
           What Our <span className="text-[#FF7A00]">Clients Say</span>
         </h2>
       </motion.div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
         className="max-w-6xl mx-auto"
       >
         {testimonials.map((t, i) => (
-          <SwiperSlide key={i} className="max-w-md">
+          <SwiperSlide key={i} className="max-w-md mx:max-w-[310px]">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 50 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -82,27 +82,27 @@ export default function Testimonials() {
               whileHover={{ scale: 1.05, rotateX: 3, rotateY: -3 }}
               className="p-8 rounded-2xl bg-gradient-to-br from-[#1a1a1a]/70 to-[#0d0d0d]/90 border border-[#FF7A00]/40 
               shadow-[0_0_25px_rgba(255,122,0,0.3)] backdrop-blur-xl
-              hover:shadow-[0_0_40px_rgba(255,122,0,0.7)] transition-all duration-500"
+              hover:shadow-[0_0_40px_rgba(255,122,0,0.7)] transition-all duration-500 mx:rounded-[24px] mx:p-5"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 mx:mb-3">
                 {[...Array(5)].map((_, idx) => (
                   <Star
                     key={idx}
-                    className="w-5 h-5 fill-[#FF7A00] text-[#FF7A00] drop-shadow-[0_0_4px_#FF7A00]"
+                    className="w-5 h-5 fill-[#FF7A00] text-[#FF7A00] drop-shadow-[0_0_4px_#FF7A00] mx:h-4 mx:w-4"
                   />
                 ))}
               </div>
 
               {/* Testimonial text */}
-              <p className="text-gray-200 text-lg leading-relaxed mb-6 italic">
+              <p className="text-gray-200 text-lg leading-relaxed mb-6 italic mx:mb-5 mx:text-[14px] mx:leading-6">
                 “{t.text}”
               </p>
 
               {/* User info */}
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3 mx:items-start">
                 <div>
-                  <h3 className="font-semibold text-white text-lg flex items-center gap-2">
+                  <h3 className="font-semibold text-white text-lg flex items-center gap-2 mx:text-[15px]">
                     {t.name}
                     <img
                       src={googleLogo}
@@ -116,11 +116,11 @@ export default function Testimonials() {
                 </div>
 
                 {/* Verified Badge */}
-                <span className="flex items-center gap-1 text-sm text-[#FF7A00] font-medium">
+                <span className="flex items-center gap-1 text-sm text-[#FF7A00] font-medium mx:text-[12px] mx:leading-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    className="w-5 h-5 text-[#FF7A00] drop-shadow-[0_0_6px_#FF7A00]"
+                    className="w-5 h-5 text-[#FF7A00] drop-shadow-[0_0_6px_#FF7A00] mx:h-4 mx:w-4"
                     viewBox="0 0 24 24"
                   >
                     <path d="M9 16.2 4.8 12l1.4-1.4L9 13.4l8.8-8.8L19.2 6z" />

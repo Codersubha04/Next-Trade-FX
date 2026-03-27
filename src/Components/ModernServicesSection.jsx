@@ -53,18 +53,18 @@ const services = [
 
 const ModernServicesSection = () => {
   return (
-    <section className="bg-[#0D0F11] py-1 px-6 max-w-7xl mx-auto text-center select-none">
-      <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[36px] mx:leading-[49px] unv text-[50px] font-semibold leading-[61.5px]">
+    <section className="bg-[#0D0F11] py-1 px-6 max-w-7xl mx-auto text-center select-none mx:px-4">
+      <h2 className="text-[#e4e4e7] text-center mx:text-center mx:text-[31px] mx:leading-[1.12] unv text-[50px] font-semibold leading-[61.5px]">
         <span className="text-[#FF7A00]">Compre Hensive </span>
         Global Trading Solutions
       </h2>
 
-      <p className="text-gray-400 max-w-3xl mx-auto mb-20 text-lg leading-relaxed">
+      <p className="text-gray-400 max-w-3xl mx-auto mb-20 text-lg leading-relaxed mx:max-w-[340px] mx:mb-10 mx:text-[14px] mx:leading-6">
         We provide solutions to 6 different types of worldwide trading problems
         in the best way possible.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 mx:gap-5">
         {services.map(({ title, description, imgSrc, color }, i) => (
           <motion.div
             key={i}
@@ -75,7 +75,7 @@ const ModernServicesSection = () => {
             className="relative rounded-2xl cursor-pointer overflow-hidden shadow-lg bg-[#121518] border border-transparent
               hover:border-gradient-to-br hover:from-[#FF7A00] hover:to-[#FFC107]
               hover:shadow-[0_0_25px_rgba(255,122,0,0.5)]
-              transition-all duration-500 flex flex-col"
+              transition-all duration-500 flex flex-col mx:rounded-[24px] mx:border mx:border-white/10"
           >
             {/* Subtle glowing gradient background */}
             <div
@@ -91,18 +91,18 @@ const ModernServicesSection = () => {
               whileHover={{ scale: 1.1, rotate: 2 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.6 }}
-              className="rounded-t-2xl w-full h-52 object-cover shadow-md"
+              className="rounded-t-2xl w-full h-52 object-cover shadow-md mx:h-48"
             />
 
-            <div className="p-7 flex flex-col flex-grow">
+            <div className="p-7 flex flex-col flex-grow mx:p-5">
               <h3
                 className="font-semibold mb-4 text-xl text-white leading-snug cursor-pointer
                 bg-gradient-to-r from-[#FF7A00] to-[#FFC107] bg-clip-text text-transparent
-                hover:brightness-125 transition duration-300"
+                hover:brightness-125 transition duration-300 mx:mb-3 mx:text-[18px] mx:leading-7"
               >
                 {title}
               </h3>
-              <p className="text-gray-300 text-sm flex-grow leading-relaxed">
+              <p className="text-gray-300 text-sm flex-grow leading-relaxed mx:text-[13px] mx:leading-6">
                 {description}
               </p>
             </div>

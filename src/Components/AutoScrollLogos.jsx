@@ -11,7 +11,7 @@ const AutoScrollLogos = () => {
     "/logos/tradingview-logo.png",
   ];
 
-  const allLogos = [...logos, ...logos]; // For seamless loop
+  const allLogos = [...logos, ...logos];
 
   return (
     <div className="relative overflow-hidden bg-[#0D0F11] py-8 mt-16">

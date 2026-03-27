@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaHamburger, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -19,7 +18,7 @@ const menuItems = [
   },
   { name: "Packages", path: "/package" },
   { name: "Contact Us", path: "/contact" },
-  { name: "White Lebel", path: "/whitelabel" },
+  { name: "White Label", path: "/whitelabel" },
 ];
 
 const Header = () => {
@@ -72,17 +71,39 @@ const Header = () => {
 
             {/* Mobile Hamburger */}
             <div className="md:hidden">
-              {!menu ? (
-                <FaHamburger
-                  className="text-[#FF8C42] w-8 h-8 cursor-pointer transition-transform duration-300 ease-in-out hover:rotate-90 hover:scale-110"
-                  onClick={toggleNavVisibility}
-                />
-              ) : (
-                <FaTimes
-                  className="text-[#FF8C42] w-8 h-8 cursor-pointer transition-transform duration-300 ease-in-out hover:rotate-90 hover:scale-110"
-                  onClick={toggleNavVisibility}
-                />
-              )}
+              <motion.button
+                type="button"
+                onClick={toggleNavVisibility}
+                whileTap={{ scale: 0.95 }}
+                aria-label={menu ? "Close navigation menu" : "Open navigation menu"}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] shadow-[0_0_18px_rgba(255,140,66,0.12)] backdrop-blur-md transition-all duration-300 hover:border-[#FF8C42]/50 hover:bg-[#FF8C42]/10"
+              >
+                <div className="relative h-4 w-5">
+                  <motion.span
+                    animate={
+                      menu
+                        ? { top: "50%", rotate: 45, y: "-50%" }
+                        : { top: "0%", rotate: 0, y: "0%" }
+                    }
+                    transition={{ duration: 0.28, ease: "easeInOut" }}
+                    className="absolute left-0 h-[2px] w-5 rounded-full bg-[#FF8C42]"
+                  />
+                  <motion.span
+                    animate={menu ? { opacity: 0, x: -8 } : { opacity: 1, x: 0 }}
+                    transition={{ duration: 0.22, ease: "easeInOut" }}
+                    className="absolute left-0 top-1/2 h-[2px] w-4 -translate-y-1/2 rounded-full bg-white"
+                  />
+                  <motion.span
+                    animate={
+                      menu
+                        ? { top: "50%", rotate: -45, y: "-50%", width: "20px" }
+                        : { top: "100%", rotate: 0, y: "-100%", width: "14px" }
+                    }
+                    transition={{ duration: 0.28, ease: "easeInOut" }}
+                    className="absolute left-0 h-[2px] rounded-full bg-[#00E676]"
+                  />
+                </div>
+              </motion.button>
             </div>
 
             {/* Desktop Menu */}
